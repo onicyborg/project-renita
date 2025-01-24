@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('profile_risiko', function (Blueprint $table) {
-            $table->uuid()->primary();
+            $table->uuid('id')->primary();
             $table->enum('pertanyaan_1_dampak', ['1', '2', '3', '4', '5']);
             $table->enum('pertanyaan_1_terjadi', ['1', '2', '3', '4', '5']);
             $table->enum('pertanyaan_2_dampak', ['1', '2', '3', '4', '5']);

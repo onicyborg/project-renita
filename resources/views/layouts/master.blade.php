@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
-    <title>Tiny Dashboard - A Bootstrap Dashboard Template</title>
+    <title>@yield('title')</title>
     <!-- Simple bar CSS -->
     <link rel="stylesheet" href="{{ asset('css/simplebar.css') }}">
     <!-- Fonts CSS -->
@@ -21,6 +21,8 @@
     <!-- App CSS -->
     <link rel="stylesheet" href="{{ asset('css/app-light.css') }}" id="lightTheme">
     <link rel="stylesheet" href="{{ asset('css/app-dark.css') }}" id="darkTheme" disabled>
+
+    @stack('styles')
 </head>
 
 <body class="vertical  light  ">
@@ -92,13 +94,7 @@
             </nav>
         </aside>
         <main role="main" class="main-content">
-            <div class="container-fluid">
-                <div class="row justify-content-center">
-                    <div class="col-12">
-                        <h1 class="page-title">Let's start</h1>
-                    </div> <!-- .col-12 -->
-                </div> <!-- .row -->
-            </div> <!-- .container-fluid -->
+            @yield('content')
         </main> <!-- main -->
     </div> <!-- .wrapper -->
     <script src="{{ asset('js/jquery.min.js') }}"></script>
@@ -111,6 +107,7 @@
     <script src="{{ asset('js/tinycolor-min.js') }}"></script>
     <script src="{{ asset('js/config.js') }}"></script>
     <script src="{{ asset('js/apps.js') }}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=UA-56159088-1"></script>
     <script>
@@ -122,6 +119,8 @@
         gtag('js', new Date());
         gtag('config', 'UA-56159088-1');
     </script>
+
+    @stack('scripts')
 </body>
 
 </html>

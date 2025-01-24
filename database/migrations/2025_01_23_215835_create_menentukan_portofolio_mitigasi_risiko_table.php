@@ -11,12 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('strategi_organisasi', function (Blueprint $table) {
+        Schema::create('menentukan_portofolio_mitigasi_risiko', function (Blueprint $table) {
             $table->uuid('id')->primary();
-            $table->enum('pertanyaan_1', ['1', '2', '3', '4', '5']);
-            $table->enum('pertanyaan_2', ['1', '2', '3', '4', '5']);
-            $table->enum('pertanyaan_3', ['1', '2', '3', '4', '5']);
-            $table->enum('pertanyaan_4', ['1', '2', '3', '4', '5']);
+            $table->enum('pertanyaan_1', ['Ya', 'Tidak']);
+            $table->enum('pertanyaan_2', ['Ya', 'Tidak']);
+            $table->enum('pertanyaan_3', ['Ya', 'Tidak']);
             $table->uuid('form_id');
             $table->uuid('auditee_id');
             $table->timestamps();
@@ -31,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('strategi_organisasi');
+        Schema::dropIfExists('menentukan_portofolio_mitigasi_risiko');
     }
 };

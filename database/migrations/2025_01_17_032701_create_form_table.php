@@ -14,6 +14,8 @@ return new class extends Migration
         Schema::create('form', function (Blueprint $table) {
             $table->uuid('id')->primary();
             $table->string('company_name');
+            $table->year('tahun_audit');
+            $table->text('deskripsi');
             $table->uuid('user_id');
             $table->timestamps();
 

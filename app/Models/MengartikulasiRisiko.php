@@ -9,7 +9,7 @@ use Illuminate\Support\Str;
 class MengartikulasiRisiko extends Model
 {
     use HasFactory;
-    protected $table = 'mengartikulasi_risiko';
+    protected $table = 'mengartikulasikan_risiko';
     protected $keyType = 'string';
     public $incrementing = false;
 

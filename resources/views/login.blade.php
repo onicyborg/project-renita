@@ -57,6 +57,10 @@
                     </label>
                 </div>
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Let me in</button>
+                <div class="mt-3">
+                    <p class="text-muted">Don't have an account?</p>
+                    <a href="{{ route('register') }}" class="btn btn-secondary btn-block">Register</a>
+                </div>
                 <p class="mt-5 mb-3 text-muted">© 2025</p>
             </form>
 

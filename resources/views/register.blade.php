@@ -56,7 +56,8 @@
                     <div class="form-group col-md-6">
                         <label for="name">Name</label>
                         <input type="text" name="name" id="name"
-                            class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" placeholder="John Doe">
+                            class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}"
+                            placeholder="John Doe">
                         @error('name')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -64,7 +65,8 @@
                     <div class="form-group col-md-6">
                         <label for="username">Username</label>
                         <input type="text" name="username" id="username"
-                            class="form-control @error('username') is-invalid @enderror" value="{{ old('username') }}" placeholder="johndoe">
+                            class="form-control @error('username') is-invalid @enderror" value="{{ old('username') }}"
+                            placeholder="johndoe">
                         @error('username')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
@@ -99,19 +101,24 @@
                     <div class="form-group col-md-6">
                         <label for="inputPassword5">New Password</label>
                         <input type="password" name="password"
-                            class="form-control @error('password') is-invalid @enderror" id="inputPassword5" placeholder="**********">
+                            class="form-control @error('password') is-invalid @enderror" id="inputPassword5"
+                            placeholder="**********">
                         @error('password')
                             <div class="invalid-feedback">{{ $message }}</div>
                         @enderror
                     </div>
                     <div class="form-group col-md-6">
                         <label for="inputPassword6">Confirm Password</label>
-                        <input type="password" name="password_confirmation" class="form-control"
-                            id="inputPassword6" placeholder="**********">
+                        <input type="password" name="password_confirmation" class="form-control" id="inputPassword6"
+                            placeholder="**********">
                     </div>
                 </div>
 
                 <button class="btn btn-lg btn-primary btn-block" type="submit">Sign up</button>
+                <div class="mt-3 text-center">
+                    <p class="text-muted">Already have an account?</p>
+                    <a href="{{ route('login') }}" class="btn btn-secondary btn-block">Login</a>
+                </div>
                 <p class="mt-5 mb-3 text-muted text-center">© 2025</p>
             </form>
         </div>
