@@ -136,6 +136,7 @@
 
 @push('styles')
     <link rel="stylesheet" href="{{ asset('css/dataTables.bootstrap4.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     @stack('styles')
     <style>
         /* Membuat konten tab scrollable */
@@ -151,6 +152,30 @@
 @push('scripts')
     <script src='{{ asset('js/jquery.dataTables.min.js') }}'></script>
     <script src='{{ asset('js/dataTables.bootstrap4.min.js') }}'></script>
+    <script>
+        // Data template struktur awal
+        const dataTemplate = {
+            labels: ["1: Sangat Tidak Penting", "2: Tidak Penting", "3: Penting", "4: Cukup Penting",
+                "5: Sangat Penting"
+            ],
+            datasets: [{
+                data: [0, 0, 0, 0, 0], // Initialize with zeros
+                backgroundColor: ["#FF6384", "#36A2EB", "#FFCE56", "#4BC0C0", "#9966FF"],
+                borderColor: "#ddd",
+                borderWidth: 1,
+            }],
+        };
+
+        const dataTemplate2 = {
+            labels: ["Ya", "Tidak"],
+            datasets: [{
+                data: [0, 0], // Initialize with zeros
+                backgroundColor: ["#FF6384", "#36A2EB"],
+                borderColor: "#ddd",
+                borderWidth: 1,
+            }],
+        };
+    </script>
     @stack('scripts')
     <script>
         @if (session('success'))
@@ -209,7 +234,7 @@
                     });
                     document.querySelector(tabContentId).classList.add('show', 'active');
                 }
-            }else{
+            } else {
                 // Jika tidak ada tab yang tersimpan, aktifkan tab pertama
                 tabLinks[0].classList.add('active');
                 tabLinks[0].setAttribute('aria-selected', 'true');

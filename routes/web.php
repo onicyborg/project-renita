@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AuditController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\GetDataController;
 use App\Http\Controllers\QuisionerController;
 use Illuminate\Support\Facades\Route;
 
@@ -43,6 +44,10 @@ Route::post('/submit-section-10/{id}/{token}', [QuisionerController::class, 'sub
 Route::post('/submit-section-11/{id}/{token}', [QuisionerController::class, 'submit_section_11'])->name('submit.section-11');
 Route::post('/submit-section-12/{id}/{token}', [QuisionerController::class, 'submit_section_12'])->name('submit.section-12');
 Route::post('/submit-section-13/{id}/{token}', [QuisionerController::class, 'submit_section_13'])->name('submit.section-13');
+
+Route::get('/data-section-1/{id}', [GetDataController::class, 'section_1'])->name('data.section-1');
+Route::get('/data-section-2/{id}', [GetDataController::class, 'section_2'])->name('data.section-2');
+Route::get('/data-section-3/{id}', [GetDataController::class, 'section_3'])->name('data.section-3');
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/', function () {
