@@ -41,7 +41,7 @@
                                 karena persepsi kontribusi yang rendah terhadap nilai bisnis</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_1"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_1 == '1' ? 'selected' : '' }}>
@@ -68,7 +68,7 @@
                                 yang rendah terhadap nilai bisnis</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_2"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_2 == '1' ? 'selected' : '' }}>
@@ -95,7 +95,7 @@
                                 aplikasi, yang terkait dengan TI</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_3"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_3 == '1' ? 'selected' : '' }}>
@@ -121,7 +121,7 @@
                                 TI</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_4"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_4 == '1' ? 'selected' : '' }}>
@@ -147,7 +147,7 @@
                                 terkait TI</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_5"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_5 == '1' ? 'selected' : '' }}>
@@ -174,7 +174,7 @@
                                 dilaporkan</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_6"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_6 == '1' ? 'selected' : '' }}>
@@ -202,7 +202,7 @@
                                 normal dan anggaran yang disetujui</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_7"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_7 == '1' ? 'selected' : '' }}>
@@ -228,7 +228,7 @@
                                 bentuk lain pemborosan sumber daya</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_8"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_8 == '1' ? 'selected' : '' }}>
@@ -255,7 +255,7 @@
                                 ketidakpuasan</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_9"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_9 == '1' ? 'selected' : '' }}>
@@ -282,7 +282,7 @@
                                 melebihi anggaran</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_10"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_10 == '1' ? 'selected' : '' }}>
@@ -309,7 +309,7 @@
                                 komitmen terhadap TI</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_11"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_11 == '1' ? 'selected' : '' }}>
@@ -336,7 +336,7 @@
                                 berkaitan dengan TI</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_12"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_12 == '1' ? 'selected' : '' }}>
@@ -361,7 +361,7 @@
                             <td>Biaya TI yang terlalu tinggi</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_13"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_13 == '1' ? 'selected' : '' }}>
@@ -388,7 +388,7 @@
                             </td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_14"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_14 == '1' ? 'selected' : '' }}>
@@ -415,7 +415,7 @@
                                 yang digunakan</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_15"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_15 == '1' ? 'selected' : '' }}>
@@ -441,7 +441,7 @@
                                 berbagai sumber</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_16"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_16 == '1' ? 'selected' : '' }}>
@@ -468,7 +468,7 @@
                                 yang sedang dikembangkan dan dioperasikan</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_17"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_17 == '1' ? 'selected' : '' }}>
@@ -497,7 +497,7 @@
                                 IT)</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_18"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_18 == '1' ? 'selected' : '' }}>
@@ -523,7 +523,7 @@
                                 dan privasi</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_19"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_19 == '1' ? 'selected' : '' }}>
@@ -549,7 +549,7 @@
                                 berinovasi menggunakan I&T</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_20"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->issue_risiko != null && $auditee->issue_risiko->pertanyaan_20 == '1' ? 'selected' : '' }}>
@@ -576,7 +576,9 @@
         <div class="card-footer d-flex justify-content-between align-items-center">
             <small class="text-muted">Terakhir diperbarui:
                 {{ $auditee->issue_risiko != null ? $auditee->issue_risiko->updated_at->diffForHumans() : 'Belum Disimpan' }}</small>
-            <button type="submit" class="btn btn-primary">Save</button>
+            @if ($status != 'view')
+                <button type="submit" class="btn btn-primary">Save</button>
+            @endif
         </div>
     </div> <!-- /. card -->
 </form>

@@ -26,7 +26,7 @@
 </p>
 
 <div class="text-end mb-3">
-    <small id="lastUpdated-section-2" class="text-muted"></small>
+    <small id="lastUpdated-section-3" class="text-muted"></small>
 </div>
 
 <!-- Tabel -->
@@ -46,7 +46,7 @@
                 <td>Kegagalan pengambilan keputusan investasi
                     TI, definisi dan portofolio</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_1"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -58,7 +58,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_1"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -75,7 +75,7 @@
                 <td>Kegagalan atau penundaan manajemen siklus
                     hidup program dan proyek</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_2"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -87,7 +87,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_2"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -103,7 +103,7 @@
                 <td>3</td>
                 <td>Ketidakefisienan biaya dan pengawasan TI</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_3"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -115,7 +115,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_3"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -132,7 +132,7 @@
                 <td>Kurangnya keahlian, keterampilan, dan
                     perilaku TI</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_4"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -144,7 +144,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_4"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -160,7 +160,7 @@
                 <td>5</td>
                 <td>Ketidaksesuaian atau arsitektur perusahaan/TI</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_5"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -172,7 +172,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_5"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -189,7 +189,7 @@
                 <td>Insiden infrastruktur operasional TI yang
                     menyebabkan gangguan atau downtime</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_6"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -201,7 +201,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_6"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -218,7 +218,7 @@
                 <td>Tindakan yang tidak sesuai dengan kebijakan
                     atau prosedur TI terjadi dalam organisasi</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_7"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -230,7 +230,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_7"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -247,7 +247,7 @@
                 <td>Masalah adopsi atau penggunaan perangkat
                     lunak</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_8"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -259,7 +259,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_8"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -276,7 +276,7 @@
                 <td>Insiden terkait perangkat keras terhadap
                     kelangsungan operasional TI dan INI LANJUTANNYA APA ANJENK</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_9"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -288,7 +288,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_9"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -305,7 +305,7 @@
                 <td>Kegagalan perangkat lunak terhadap operasi
                     bisnis dan kepuasan pengguna</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_10"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -317,7 +317,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_10"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -335,7 +335,7 @@
                     terhadap keamanan data dan reputasi
                     organisasi</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_11"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -347,7 +347,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_11"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -365,7 +365,7 @@
                     ketiga terhadap kelancaran operasional dan
                     kepatuhan TI organisasi</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_12"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -377,7 +377,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_12"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -394,7 +394,7 @@
                 <td>Ketidakpatuhan terhadap regulasi atau
                     kebijakan TI yang berlaku</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_13"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -406,7 +406,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_13"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -423,7 +423,7 @@
                 <td>Isu geopolitik terhadap kestabilan operasional
                     dan strategi TI organisasi</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_14"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -435,7 +435,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_14"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -452,7 +452,7 @@
                 <td>Faktor industri mempengaruhi keputusan atau
                     kebijakan TI dalam organisasi</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_15"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -464,7 +464,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_15"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -482,7 +482,7 @@
                     ekstrem) terhadap infrastruktur dan operasi TI
                     organisasi</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_16"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -494,7 +494,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_16"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -512,7 +512,7 @@
                     kemampuan organisasi untuk berkompetisi
                     dan berkembang</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_17"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -524,7 +524,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_17"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -540,7 +540,7 @@
                 <td>18</td>
                 <td>Isu lingkungan mempengaruhi keputusan atau kebijakan terkait TI di organisasi</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_18"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -552,7 +552,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_18"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -568,7 +568,7 @@
                 <td>19</td>
                 <td>Kegagalan dalam manajemen data dan informasi yang memengaruhi operasional atau kepatuhan</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_19"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -580,7 +580,7 @@
                     </div>
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="terjadi_19"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -976,10 +976,10 @@
                             `Terakhir diperbarui: ${new Date(data.last_updated_at).toLocaleString('id-ID')}` :
                             'Belum ada data';
 
-                        document.getElementById('lastUpdated-section-2').textContent =
+                        document.getElementById('lastUpdated-section-3').textContent =
                             `Total Responden: ${totalResponses} Orang dari ${totalAuditee} Auditee, ${lastUpdated}`;
                     } else {
-                        document.getElementById('lastUpdated-section-2').textContent =
+                        document.getElementById('lastUpdated-section-3').textContent =
                             'Belum ada data tersedia';
                     }
                 }

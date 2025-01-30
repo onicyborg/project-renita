@@ -29,13 +29,27 @@
                 <div class="col-md-12 my-4">
 
                     <div class="mb-4">
-                        <h2 class="text-center">
-                            Quisioner Audit {{ $form->company_name }} Tahun {{ $form->tahun_audit }}
-                        </h2>
-                        <p class="text-center text-muted">
-                            {{ $form->deskripsi }}
-                        </p>
+                        @if ($status == 'view')
+                            <h2 class="text-center">
+                                Quisioner Audit {{ $auditee->form->company_name }} Tahun
+                                {{ $auditee->form->tahun_audit }}
+                            </h2>
+                            <p class="text-center text-muted">
+                                {{ $auditee->form->deskripsi }}
+                            </p>
+                            <p class="text-center text-bold">
+                                Auditee : {{ $auditee->name }} ({{ $auditee->jabatan }})
+                            </p>
+                        @else
+                            <h2 class="text-center">
+                                Quisioner Audit {{ $form->company_name }} Tahun {{ $form->tahun_audit }}
+                            </h2>
+                            <p class="text-center text-muted">
+                                {{ $form->deskripsi }}
+                            </p>
+                        @endif
                     </div>
+
 
                     {{-- section-1 --}}
                     @include('quisioner.section-quisioner.section-1')

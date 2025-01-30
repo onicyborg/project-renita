@@ -35,7 +35,7 @@
                                 kerugian/keuntungan serta tingkat kepercayaan.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_1"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->mengartikulasikan_risiko != null && $auditee->mengartikulasikan_risiko->pertanyaan_1 == 'Ya' ? 'selected' : '' }}>
@@ -52,7 +52,7 @@
                                 mungkin, potensi kerugian TI, serta dampak pada reputasi, hukum, dan regulasi.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_2"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->mengartikulasikan_risiko != null && $auditee->mengartikulasikan_risiko->pertanyaan_2 == 'Ya' ? 'selected' : '' }}>
@@ -69,7 +69,7 @@
                                 proses manajemen risiko, kontrol, kesenjangan, dan status perbaikan.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_3"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->mengartikulasikan_risiko != null && $auditee->mengartikulasikan_risiko->pertanyaan_3 == 'Ya' ? 'selected' : '' }}>
@@ -86,7 +86,7 @@
                                 besar untuk mendukung pertumbuhan dan keuntungan.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_4"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->mengartikulasikan_risiko != null && $auditee->mengartikulasikan_risiko->pertanyaan_4 == 'Ya' ? 'selected' : '' }}>
@@ -104,7 +104,7 @@
                             </td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_5"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->mengartikulasikan_risiko != null && $auditee->mengartikulasikan_risiko->pertanyaan_5 == 'Ya' ? 'selected' : '' }}>
@@ -122,7 +122,9 @@
         <div class="card-footer d-flex justify-content-between align-items-center">
             <small class="text-muted">Terakhir diperbarui:
                 {{ $auditee->mengartikulasikan_risiko != null ? $auditee->mengartikulasikan_risiko->updated_at->diffForHumans() : 'Belum Disimpan' }}</small>
-            <button type="submit" class="btn btn-primary">Save</button>
+            @if ($status != 'view')
+                <button type="submit" class="btn btn-primary">Save</button>
+            @endif
         </div>
     </div> <!-- /. card -->
 </form>

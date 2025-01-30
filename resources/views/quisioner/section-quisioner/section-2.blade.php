@@ -39,7 +39,7 @@
                             </td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_1"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->tujuan_organisasi != null && $auditee->tujuan_organisasi->pertanyaan_1 == '1' ? 'selected' : '' }}>
@@ -64,7 +64,7 @@
                             <td>Seberapa Penting pengelolaan risiko bisnis untuk memastikan stabilitas operasional?</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_2"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->tujuan_organisasi != null && $auditee->tujuan_organisasi->pertanyaan_2 == '1' ? 'selected' : '' }}>
@@ -90,7 +90,7 @@
                             </td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_3"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->tujuan_organisasi != null && $auditee->tujuan_organisasi->pertanyaan_3 == '1' ? 'selected' : '' }}>
@@ -115,7 +115,7 @@
                             <td>Seberapa penting kualitas informasi keuangan untuk pengambilan keputusan strategis?</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_4"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->tujuan_organisasi != null && $auditee->tujuan_organisasi->pertanyaan_4 == '1' ? 'selected' : '' }}>
@@ -140,7 +140,7 @@
                             <td>Seberapa penting membangun budaya layanan yang fokus pada kebutuhan pelanggan?</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_5"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->tujuan_organisasi != null && $auditee->tujuan_organisasi->pertanyaan_5 == '1' ? 'selected' : '' }}>
@@ -165,7 +165,7 @@
                             <td>Seberapa penting memastikan layanan bisnis tersedia tanpa gangguan?</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_6"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->tujuan_organisasi != null && $auditee->tujuan_organisasi->pertanyaan_6 == '1' ? 'selected' : '' }}>
@@ -190,7 +190,7 @@
                             <td>Seberapa penting kualitas informasi manajemen dalam mendukung keputusan bisnis?</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_7"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->tujuan_organisasi != null && $auditee->tujuan_organisasi->pertanyaan_7 == '1' ? 'selected' : '' }}>
@@ -217,7 +217,7 @@
                             </td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_8"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->tujuan_organisasi != null && $auditee->tujuan_organisasi->pertanyaan_8 == '1' ? 'selected' : '' }}>
@@ -243,7 +243,7 @@
                             </td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_9"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->tujuan_organisasi != null && $auditee->tujuan_organisasi->pertanyaan_9 == '1' ? 'selected' : '' }}>
@@ -268,7 +268,7 @@
                             <td>Seberapa penting keterampilan dan motivasi staff untuk meningkatkan produktivitas?</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_10"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->tujuan_organisasi != null && $auditee->tujuan_organisasi->pertanyaan_10 == '1' ? 'selected' : '' }}>
@@ -294,7 +294,7 @@
                                 organisasi?</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_11"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->tujuan_organisasi != null && $auditee->tujuan_organisasi->pertanyaan_11 == '1' ? 'selected' : '' }}>
@@ -320,7 +320,7 @@
                             </td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_12"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->tujuan_organisasi != null && $auditee->tujuan_organisasi->pertanyaan_12 == '1' ? 'selected' : '' }}>
@@ -346,7 +346,7 @@
                                 panjang organisasi?</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_13"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala -</option>
                                     <option value="1"
                                         {{ $auditee->tujuan_organisasi != null && $auditee->tujuan_organisasi->pertanyaan_13 == '1' ? 'selected' : '' }}>
@@ -373,7 +373,9 @@
         <div class="card-footer d-flex justify-content-between align-items-center">
             <small class="text-muted">Terakhir diperbarui:
                 {{ $auditee->tujuan_organisasi != null ? $auditee->tujuan_organisasi->updated_at->diffForHumans() : 'Belum Disimpan' }}</small>
-            <button type="submit" class="btn btn-primary">Save</button>
+            @if ($status != 'view')
+                <button type="submit" class="btn btn-primary">Save</button>
+            @endif
         </div>
     </div> <!-- /. card -->
 </form>

@@ -32,7 +32,7 @@
                                 risiko Teknologi Informasi (TI).</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_1"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_1 == 'Ya' ? 'selected' : '' }}>
@@ -49,7 +49,7 @@
                                 strategisnya.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_2"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_2 == 'Ya' ? 'selected' : '' }}>
@@ -66,7 +66,7 @@
                                 risiko yang telah ditentukan.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_3"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_3 == 'Ya' ? 'selected' : '' }}>
@@ -83,7 +83,7 @@
                                 appetite risiko berada di bawah kapasitas risiko organisasi.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_4"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_4 == 'Ya' ? 'selected' : '' }}>
@@ -100,7 +100,7 @@
                                 menjadi bagian dari proses pengambilan keputusan strategis.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_5"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_5 == 'Ya' ? 'selected' : '' }}>
@@ -117,7 +117,7 @@
                                 kerugian TI dan toleransi risiko dari pihak manajemen.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_6"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_6 == 'Ya' ? 'selected' : '' }}>
@@ -133,7 +133,7 @@
                                 diperlukan untuk manajemen risiko TI.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_7"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_7 == 'Ya' ? 'selected' : '' }}>
@@ -151,7 +151,9 @@
         <div class="card-footer d-flex justify-content-between align-items-center">
             <small class="text-muted">Terakhir diperbarui:
                 {{ $auditee->evaluasi_manajemen_risiko != null ? $auditee->evaluasi_manajemen_risiko->updated_at->diffForHumans() : 'Belum Disimpan' }}</small>
-            <button type="submit" class="btn btn-primary">Save</button>
+            @if ($status != 'view')
+                <button type="submit" class="btn btn-primary">Save</button>
+            @endif
         </div>
     </div> <!-- /. card -->
 </form>

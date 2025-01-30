@@ -1,5 +1,5 @@
 <h3 class="mt-3 text-center">Section 5 (Identifikasi optimasi risiko teknologi informasi Bagian Pertama: Evaluasi
-        Manajemen Risiko)</h3>
+    Manajemen Risiko)</h3>
 
 <!-- Deskripsi -->
 <p class="mt-3">
@@ -10,6 +10,10 @@
     Pengisian pada kolom aktivitas dilakukan harap pilih <strong>Ya (Aktivitas dilakukan)</strong> atau
     <strong>Tidak (Aktivitas tidak dilakukan)</strong> sesuai kondisi yang berlaku di organisasi
 </p>
+
+<div class="text-end mb-3">
+    <small id="lastUpdated-section-5" class="text-muted"></small>
+</div>
 
 <!-- Tabel -->
 <div class="table-responsive mt-4">
@@ -25,7 +29,13 @@
                 <td>Memahami organisasi dan konteksnya yang berkaitan dengan
                     risiko Teknologi Informasi (TI).</td>
                 <td>
-
+                    <div style="width: 120px; height: 120px; margin: auto;">
+                        <canvas id="section_5_1"></canvas>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
+                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -33,7 +43,13 @@
                     TI yang bersedia diterima organisasi dalam mencapai tujuan
                     strategisnya.</td>
                 <td>
-
+                    <div style="width: 120px; height: 120px; margin: auto;">
+                        <canvas id="section_5_2"></canvas>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
+                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -41,7 +57,13 @@
                     penyimpangan sementara yang masih dapat diterima dari batas
                     risiko yang telah ditentukan.</td>
                 <td>
-
+                    <div style="width: 120px; height: 120px; margin: auto;">
+                        <canvas id="section_5_3"></canvas>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
+                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -49,7 +71,13 @@
                     risiko organisasi secara keseluruhan, serta memastikan bahwa
                     appetite risiko berada di bawah kapasitas risiko organisasi.</td>
                 <td>
-
+                    <div style="width: 120px; height: 120px; margin: auto;">
+                        <canvas id="section_5_4"></canvas>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
+                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -57,7 +85,13 @@
                     strategis dibuat, serta memastikan bahwa pertimbangan risiko
                     menjadi bagian dari proses pengambilan keputusan strategis.</td>
                 <td>
-
+                    <div style="width: 120px; height: 120px; margin: auto;">
+                        <canvas id="section_5_5"></canvas>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
+                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
+                    </div>
                 </td>
             </tr>
             <tr>
@@ -65,16 +99,159 @@
                     kesesuaian dengan kapasitas organisasi dalam menangani
                     kerugian TI dan toleransi risiko dari pihak manajemen.</td>
                 <td>
-
+                    <div style="width: 120px; height: 120px; margin: auto;">
+                        <canvas id="section_5_6"></canvas>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
+                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
+                    </div>
                 </td>
             </tr>
             <tr>
                 <td>Merekrut dan mempertahankan keterampilan serta personel yang
                     diperlukan untuk manajemen risiko TI.</td>
                 <td>
-
+                    <div style="width: 120px; height: 120px; margin: auto;">
+                        <canvas id="section_5_7"></canvas>
+                    </div>
+                    <div class="mt-2 text-center">
+                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
+                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
+                    </div>
                 </td>
             </tr>
         </tbody>
     </table>
 </div>
+
+
+@push('scripts')
+    <script>
+        // Chart instances
+        let section_5_1, section_5_2, section_5_3, section_5_4, section_5_5, section_5_6, section_5_7;
+
+        // Fungsi untuk inisialisasi chart
+        function createChart(canvasId, data) {
+            const ctx = document.getElementById(canvasId).getContext("2d");
+            return new Chart(ctx, {
+                type: "pie",
+                data: data,
+                options: {
+                    responsive: true,
+                    maintainAspectRatio: true,
+                    plugins: {
+                        legend: {
+                            display: false,
+                        },
+                    },
+                },
+            });
+        }
+
+        // Fetch and update data
+        async function fetchData_section_5(formId) {
+            try {
+                const response = await fetch(`/data-section-5/${formId}`);
+                const data = await response.json();
+
+                if (data) {
+                    section_5_1.data.datasets[0].data = [
+                        data.pertanyaan_1_jawaban_ya,
+                        data.pertanyaan_1_jawaban_tidak,
+                    ];
+                    section_5_1.update();
+
+                    section_5_2.data.datasets[0].data = [
+                        data.pertanyaan_2_jawaban_ya,
+                        data.pertanyaan_2_jawaban_tidak,
+                    ];
+                    section_5_2.update();
+
+                    section_5_3.data.datasets[0].data = [
+                        data.pertanyaan_3_jawaban_ya,
+                        data.pertanyaan_3_jawaban_tidak,
+                    ];
+                    section_5_3.update();
+
+                    section_5_4.data.datasets[0].data = [
+                        data.pertanyaan_4_jawaban_ya,
+                        data.pertanyaan_4_jawaban_tidak,
+                    ];
+                    section_5_4.update();
+
+                    section_5_5.data.datasets[0].data = [
+                        data.pertanyaan_5_jawaban_ya,
+                        data.pertanyaan_5_jawaban_tidak,
+                    ];
+                    section_5_5.update();
+
+                    section_5_6.data.datasets[0].data = [
+                        data.pertanyaan_6_jawaban_ya,
+                        data.pertanyaan_6_jawaban_tidak,
+                    ];
+                    section_5_6.update();
+
+                    section_5_7.data.datasets[0].data = [
+                        data.pertanyaan_7_jawaban_ya,
+                        data.pertanyaan_7_jawaban_tidak,
+                    ];
+                    section_5_7.update();
+
+
+                    // Update last updated timestamp if needed
+                    if (data) {
+                        const totalResponses = data.total_responses ?? 0;
+                        const totalAuditee = data.total_auditee ?? 0;
+                        const lastUpdated = data.last_updated_at ?
+                            `Terakhir diperbarui: ${new Date(data.last_updated_at).toLocaleString('id-ID')}` :
+                            'Belum ada data';
+
+                        document.getElementById('lastUpdated-section-5').textContent =
+                            `Total Responden: ${totalResponses} Orang dari ${totalAuditee} Auditee, ${lastUpdated}`;
+                    } else {
+                        document.getElementById('lastUpdated-section-5').textContent =
+                            'Belum ada data tersedia';
+                    }
+                }
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        // Initialize charts
+        document.addEventListener('DOMContentLoaded', function() {
+            // Create charts
+            section_5_1 = createChart("section_5_1", {
+                ...dataTemplate2
+            });
+
+            section_5_2 = createChart("section_5_2", {
+                ...dataTemplate2
+            });
+
+            section_5_3 = createChart("section_5_3", {
+                ...dataTemplate2
+            });
+
+            section_5_4 = createChart("section_5_4", {
+                ...dataTemplate2
+            });
+
+            section_5_5 = createChart("section_5_5", {
+                ...dataTemplate2
+            });
+
+            section_5_6 = createChart("section_5_6", {
+                ...dataTemplate2
+            });
+
+            section_5_7 = createChart("section_5_7", {
+                ...dataTemplate2
+            });
+
+            // Fetch initial data (replace 1 with your actual form_id)
+            fetchData_section_5('{{ $form->id }}');
+        });
+    </script>
+@endpush

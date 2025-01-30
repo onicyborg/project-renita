@@ -38,7 +38,7 @@
                                 pentingnya aset bisnis.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_1"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->menganalisis_risiko != null && $auditee->menganalisis_risiko->pertanyaan_1 == 'Ya' ? 'selected' : '' }}>
@@ -55,7 +55,7 @@
                                 dari berbagai jenis ancaman dan kejadian.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_2"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->menganalisis_risiko != null && $auditee->menganalisis_risiko->pertanyaan_2 == 'Ya' ? 'selected' : '' }}>
@@ -73,7 +73,7 @@
                                 operasional yang diketahui.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_3"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->menganalisis_risiko != null && $auditee->menganalisis_risiko->pertanyaan_3 == 'Ya' ? 'selected' : '' }}>
@@ -91,7 +91,7 @@
                                 tinggi.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_4"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->menganalisis_risiko != null && $auditee->menganalisis_risiko->pertanyaan_4 == 'Ya' ? 'selected' : '' }}>
@@ -107,7 +107,7 @@
                                 appetite dan toleransi risiko.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_5"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->menganalisis_risiko != null && $auditee->menganalisis_risiko->pertanyaan_5 == 'Ya' ? 'selected' : '' }}>
@@ -124,7 +124,7 @@
                                 langkah-langkah kontrol penting untuk mitigasi risiko.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_6"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->menganalisis_risiko != null && $auditee->menganalisis_risiko->pertanyaan_6 == 'Ya' ? 'selected' : '' }}>
@@ -142,7 +142,7 @@
                                 diperiksa untuk bias.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_7"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->menganalisis_risiko != null && $auditee->menganalisis_risiko->pertanyaan_7 == 'Ya' ? 'selected' : '' }}>
@@ -160,7 +160,7 @@
                                 optimal.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_8"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->menganalisis_risiko != null && $auditee->menganalisis_risiko->pertanyaan_8 == 'Ya' ? 'selected' : '' }}>
@@ -178,7 +178,9 @@
         <div class="card-footer d-flex justify-content-between align-items-center">
             <small class="text-muted">Terakhir diperbarui:
                 {{ $auditee->menganalisis_risiko != null ? $auditee->menganalisis_risiko->updated_at->diffForHumans() : 'Belum Disimpan' }}</small>
-            <button type="submit" class="btn btn-primary">Save</button>
+            @if ($status != 'view')
+                <button type="submit" class="btn btn-primary">Save</button>
+            @endif
         </div>
     </div> <!-- /. card -->
 </form>

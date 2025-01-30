@@ -50,7 +50,7 @@
                                 TI, definisi dan portofolio</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_1_dampak"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala Dampak -</option>
                                     <option value="1"
                                         {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_1_dampak == '1' ? 'selected' : '' }}>
@@ -71,7 +71,7 @@
                             </td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_1_terjadi"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala Terjadi -</option>
                                     <option value="1"
                                         {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_1_terjadi == '1' ? 'selected' : '' }}>
@@ -97,7 +97,7 @@
                                 hidup program dan proyek</td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_2_dampak"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Dampak -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_2_dampak == '1' ? 'selected' : '' }}>
@@ -118,7 +118,7 @@
                                 </td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_2_terjadi"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Terjadi -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_2_terjadi == '1' ? 'selected' : '' }}>
@@ -143,7 +143,7 @@
                             <td>Ketidakefisienan biaya dan pengawasan TI</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_3_dampak"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala Dampak -</option>
                                     <option value="1"
                                         {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_3_dampak == '1' ? 'selected' : '' }}>
@@ -164,7 +164,7 @@
                             </td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_3_terjadi"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala Terjadi -</option>
                                     <option value="1"
                                         {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_3_terjadi == '1' ? 'selected' : '' }}>
@@ -190,7 +190,7 @@
                                 perilaku TI</td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_4_dampak"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Dampak -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_4_dampak == '1' ? 'selected' : '' }}>
@@ -211,7 +211,7 @@
                                 </td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_4_terjadi"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Terjadi -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_4_terjadi == '1' ? 'selected' : '' }}>
@@ -236,7 +236,7 @@
                             <td>Ketidaksesuaian atau arsitektur perusahaan/TI</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_5_dampak"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala Dampak -</option>
                                     <option value="1"
                                         {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_5_dampak == '1' ? 'selected' : '' }}>
@@ -257,7 +257,7 @@
                             </td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_5_terjadi"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala Terjadi -</option>
                                     <option value="1"
                                         {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_5_terjadi == '1' ? 'selected' : '' }}>
@@ -283,7 +283,7 @@
                                 menyebabkan gangguan atau downtime</td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_6_dampak"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Dampak -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_6_dampak == '1' ? 'selected' : '' }}>
@@ -304,7 +304,7 @@
                                 </td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_6_terjadi"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Terjadi -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_6_terjadi == '1' ? 'selected' : '' }}>
@@ -330,7 +330,7 @@
                                 atau prosedur TI terjadi dalam organisasi</td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_7_dampak"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Dampak -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_7_dampak == '1' ? 'selected' : '' }}>
@@ -351,7 +351,7 @@
                                 </td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_7_terjadi"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Terjadi -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_7_terjadi == '1' ? 'selected' : '' }}>
@@ -377,7 +377,7 @@
                                 lunak</td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_8_dampak"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Dampak -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_8_dampak == '1' ? 'selected' : '' }}>
@@ -398,7 +398,7 @@
                                 </td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_8_terjadi"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Terjadi -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_8_terjadi == '1' ? 'selected' : '' }}>
@@ -424,7 +424,7 @@
                                 kelangsungan operasional TI dan INI LANJUTANNYA APA ANJENK</td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_9_dampak"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Dampak -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_9_dampak == '1' ? 'selected' : '' }}>
@@ -445,7 +445,7 @@
                                 </td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_9_terjadi"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Terjadi -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_9_terjadi == '1' ? 'selected' : '' }}>
@@ -471,7 +471,7 @@
                                 bisnis dan kepuasan pengguna</td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_10_dampak"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Dampak -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_10_dampak == '1' ? 'selected' : '' }}>
@@ -492,7 +492,7 @@
                                 </td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_10_terjadi"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Terjadi -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_10_terjadi == '1' ? 'selected' : '' }}>
@@ -519,7 +519,7 @@
                                 organisasi</td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_11_dampak"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Dampak -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_11_dampak == '1' ? 'selected' : '' }}>
@@ -540,7 +540,7 @@
                                 </td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_11_terjadi"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Terjadi -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_11_terjadi == '1' ? 'selected' : '' }}>
@@ -567,7 +567,7 @@
                                 kepatuhan TI organisasi</td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_12_dampak"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Dampak -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_12_dampak == '1' ? 'selected' : '' }}>
@@ -588,7 +588,7 @@
                                 </td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_12_terjadi"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Terjadi -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_12_terjadi == '1' ? 'selected' : '' }}>
@@ -614,7 +614,7 @@
                                 kebijakan TI yang berlaku</td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_13_dampak"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Dampak -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_13_dampak == '1' ? 'selected' : '' }}>
@@ -635,7 +635,7 @@
                                 </td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_13_terjadi"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Terjadi -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_13_terjadi == '1' ? 'selected' : '' }}>
@@ -661,7 +661,7 @@
                                 dan strategi TI organisasi</td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_14_dampak"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Dampak -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_14_dampak == '1' ? 'selected' : '' }}>
@@ -682,7 +682,7 @@
                                 </td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_14_terjadi"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Terjadi -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_14_terjadi == '1' ? 'selected' : '' }}>
@@ -708,7 +708,7 @@
                                 kebijakan TI dalam organisasi</td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_15_dampak"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Dampak -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_15_dampak == '1' ? 'selected' : '' }}>
@@ -729,7 +729,7 @@
                                 </td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_15_terjadi"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Terjadi -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_15_terjadi == '1' ? 'selected' : '' }}>
@@ -756,7 +756,7 @@
                                 organisasi</td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_16_dampak"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Dampak -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_16_dampak == '1' ? 'selected' : '' }}>
@@ -777,7 +777,7 @@
                                 </td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_16_terjadi"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Terjadi -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_16_terjadi == '1' ? 'selected' : '' }}>
@@ -804,7 +804,7 @@
                                 dan berkembang</td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_17_dampak"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Dampak -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_17_dampak == '1' ? 'selected' : '' }}>
@@ -825,7 +825,7 @@
                                 </td>
                                 <td>
                                     <select class="custom-select text-center" id="custom-select" name="pertanyaan_17_terjadi"
-                                        required>
+                                        required {{ $status == 'view' ? 'disabled' : '' }}>
                                         <option value="">- Pilih Skala Terjadi -</option>
                                         <option value="1"
                                             {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_17_terjadi == '1' ? 'selected' : '' }}>
@@ -850,7 +850,7 @@
                             <td>Isu lingkungan mempengaruhi keputusan atau kebijakan terkait TI di organisasi</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_18_dampak"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala Dampak -</option>
                                     <option value="1"
                                         {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_18_dampak == '1' ? 'selected' : '' }}>
@@ -871,7 +871,7 @@
                             </td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_18_terjadi"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala Terjadi -</option>
                                     <option value="1"
                                         {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_18_terjadi == '1' ? 'selected' : '' }}>
@@ -897,7 +897,7 @@
                             </td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_19_dampak"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala Dampak -</option>
                                     <option value="1"
                                         {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_19_dampak == '1' ? 'selected' : '' }}>
@@ -918,7 +918,7 @@
                             </td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_19_terjadi"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih Skala Terjadi -</option>
                                     <option value="1"
                                         {{ $auditee->profile_resiko != null && $auditee->profile_resiko->pertanyaan_19_terjadi == '1' ? 'selected' : '' }}>
@@ -944,7 +944,9 @@
         </div> <!-- /. card-body -->
         <div class="card-footer d-flex justify-content-between align-items-center">
             <small class="text-muted">Terakhir diperbarui: {{ $auditee->profile_resiko != null ? $auditee->profile_resiko->updated_at->diffForHumans() : 'Belum Disimpan' }}</small>
-            <button type="submit" class="btn btn-primary">Save</button>
+            @if ($status != 'view')
+                <button type="submit" class="btn btn-primary">Save</button>
+            @endif
         </div>
     </div> <!-- /. card -->
 </form>

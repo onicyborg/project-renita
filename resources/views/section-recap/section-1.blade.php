@@ -37,7 +37,7 @@
                 <td>Seberapa penting bagi organisasi, berfokus pada pertumbuhan dan peningkatan pendapatan dalam jangka
                     panjang?</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="chartGrowth"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -54,7 +54,7 @@
                 <td>Seberapa penting inovasi dan diferensiasi untuk menciptakan nilai tambah dan keunggulan kompetitif?
                 </td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="chartInnovation"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -70,7 +70,7 @@
                 <td>Cost Leadership</td>
                 <td>Seberapa penting pengelolaan biaya untuk memastikan efisiensi operasional dan daya saing?</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="chartCost"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -86,7 +86,7 @@
                 <td>Client Service/Stability</td>
                 <td>Seberapa penting memastikan stabilitas layanan dan orientasi pada kebutuhan klien?</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="chartClient"></canvas>
                     </div>
                     <div class="mt-2 text-center">

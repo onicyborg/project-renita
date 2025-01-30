@@ -37,7 +37,7 @@
                                 risiko Teknologi Informasi (TI).</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_1"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->pengumpulan_manajemen_risiko != null && $auditee->pengumpulan_manajemen_risiko->pertanyaan_1 == 'Ya' ? 'selected' : '' }}>
@@ -53,7 +53,7 @@
                                 lingkungan operasional internal dan eksternal organisasi.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_2"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->pengumpulan_manajemen_risiko != null && $auditee->pengumpulan_manajemen_risiko->pertanyaan_2 == 'Ya' ? 'selected' : '' }}>
@@ -70,7 +70,7 @@
                                 serta kategori dampak dan kemungkinan.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_3"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->pengumpulan_manajemen_risiko != null && $auditee->pengumpulan_manajemen_risiko->pertanyaan_3 == 'Ya' ? 'selected' : '' }}>
@@ -88,7 +88,7 @@
                                 data relevan dari masalah, insiden, dan investigasi terkait.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_4"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->pengumpulan_manajemen_risiko != null && $auditee->pengumpulan_manajemen_risiko->pertanyaan_4 == 'Ya' ? 'selected' : '' }}>
@@ -105,7 +105,7 @@
                                 kesepakatan bersama.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_5"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->pengumpulan_manajemen_risiko != null && $auditee->pengumpulan_manajemen_risiko->pertanyaan_5 == 'Ya' ? 'selected' : '' }}>
@@ -122,7 +122,7 @@
                                 yang memengaruhi berbagai kejadian.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_6"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->pengumpulan_manajemen_risiko != null && $auditee->pengumpulan_manajemen_risiko->pertanyaan_6 == 'Ya' ? 'selected' : '' }}>
@@ -139,7 +139,7 @@
                                 frekuensi kejadian serta besarnya kerugian.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_7"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->pengumpulan_manajemen_risiko != null && $auditee->pengumpulan_manajemen_risiko->pertanyaan_7 == 'Ya' ? 'selected' : '' }}>
@@ -156,7 +156,7 @@
                                 risiko internal serta eksternal terkait.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_8"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->pengumpulan_manajemen_risiko != null && $auditee->pengumpulan_manajemen_risiko->pertanyaan_8 == 'Ya' ? 'selected' : '' }}>
@@ -174,7 +174,9 @@
         <div class="card-footer d-flex justify-content-between align-items-center">
             <small class="text-muted">Terakhir diperbarui:
                 {{ $auditee->pengumpulan_manajemen_risiko != null ? $auditee->pengumpulan_manajemen_risiko->updated_at->diffForHumans() : 'Belum Disimpan' }}</small>
-            <button type="submit" class="btn btn-primary">Save</button>
+            @if ($status != 'view')
+                <button type="submit" class="btn btn-primary">Save</button>
+            @endif
         </div>
     </div> <!-- /. card -->
 </form>

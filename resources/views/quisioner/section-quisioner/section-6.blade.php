@@ -40,7 +40,7 @@
                                 dalam praktik manajemen risiko dan kegiatan operasional.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_1"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->arahan_manajemen_risiko != null && $auditee->arahan_manajemen_risiko->pertanyaan_1 == 'Ya' ? 'selected' : '' }}>
@@ -56,7 +56,7 @@
                                 mencakup seluruh level organisasi.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_2"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->arahan_manajemen_risiko != null && $auditee->arahan_manajemen_risiko->pertanyaan_2 == 'Ya' ? 'selected' : '' }}>
@@ -75,7 +75,7 @@
                                 dilaporkan, kapan, di mana, dan bagaimana).</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_3"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->arahan_manajemen_risiko != null && $auditee->arahan_manajemen_risiko->pertanyaan_3 == 'Ya' ? 'selected' : '' }}>
@@ -94,7 +94,7 @@
                                 diekskalasi kepada pengambil keputusan yang relevan.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_4"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->arahan_manajemen_risiko != null && $auditee->arahan_manajemen_risiko->pertanyaan_4 == 'Ya' ? 'selected' : '' }}>
@@ -112,7 +112,7 @@
                                 melaporkan informasi pengukuran.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_5"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->arahan_manajemen_risiko != null && $auditee->arahan_manajemen_risiko->pertanyaan_5 == 'Ya' ? 'selected' : '' }}>
@@ -130,7 +130,9 @@
         <div class="card-footer d-flex justify-content-between align-items-center">
             <small class="text-muted">Terakhir diperbarui:
                 {{ $auditee->arahan_manajemen_risiko != null ? $auditee->arahan_manajemen_risiko->updated_at->diffForHumans() : 'Belum Disimpan' }}</small>
-            <button type="submit" class="btn btn-primary">Save</button>
+            @if ($status != 'view')
+                <button type="submit" class="btn btn-primary">Save</button>
+            @endif
         </div>
     </div> <!-- /. card -->
 </form>

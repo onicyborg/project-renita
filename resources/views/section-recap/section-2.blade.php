@@ -38,7 +38,7 @@
                 <td>EG01</td>
                 <td>Seberapa penting memastikan portofolio produk dan layanan tetap kompetitif di pasar?</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="EG01"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -54,7 +54,7 @@
                 <td>EG02</td>
                 <td>Seberapa Penting pengelolaan risiko bisnis untuk memastikan stabilitas operasional?</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="EG02"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -70,7 +70,7 @@
                 <td>EG03</td>
                 <td>Seberapa penting kepatuhan terhadap hukum dan regulasi untuk menghindari dapak negatif?</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="EG03"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -86,7 +86,7 @@
                 <td>EG04</td>
                 <td>Seberapa penting kualitas informasi keuangan untuk pengambilan keputusan strategis?</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="EG04"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -102,7 +102,7 @@
                 <td>EG05</td>
                 <td>Seberapa penting membangun budaya layanan yang fokus pada kebutuhan pelanggan?</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="EG05"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -118,7 +118,7 @@
                 <td>EG06</td>
                 <td>Seberapa penting memastikan layanan bisnis tersedia tanpa gangguan?</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="EG06"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -134,7 +134,7 @@
                 <td>EG07</td>
                 <td>Seberapa penting kualitas informasi manajemen dalam mendukung keputusan bisnis?</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="EG07"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -150,7 +150,7 @@
                 <td>EG08</td>
                 <td>Seberapa penting optimalisasi proses bisnis internal untuk mendukung efisiensi operasional?</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="EG08"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -166,7 +166,7 @@
                 <td>EG09</td>
                 <td>Seberapa penting optimalisasi biaya proses bisnis untuk mendukung efisiensi anggaran?</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="EG09"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -182,7 +182,7 @@
                 <td>EG10</td>
                 <td>Seberapa penting keterampilan dan motivasi staff untuk meningkatkan produktivitas?</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="EG10"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -198,7 +198,7 @@
                 <td>EG11</td>
                 <td>Seberapa penting kepatuhan terhadap kebijakan internal dalam mendukung pertumbuhan organisasi?</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="EG11"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -214,7 +214,7 @@
                 <td>EG12</td>
                 <td>Seberapa penting program transformasi digital untuk mendukung pertumbuhan organisasi?</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="EG12"></canvas>
                     </div>
                     <div class="mt-2 text-center">
@@ -231,7 +231,7 @@
                 <td>Seberapa penting inovasi produk dan bisnis dalam mendukung pencapaian tujuan jangka
                     panjang organisasi?</td>
                 <td>
-                    <div style="width: 100px; height: 100px; margin: auto;">
+                    <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="EG13"></canvas>
                     </div>
                     <div class="mt-2 text-center">

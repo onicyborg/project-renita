@@ -37,7 +37,7 @@
                                 kontrol dan memetakannya ke skenario risiko TI.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_1"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->menentukan_portofolio_mitigasi_risiko != null && $auditee->menentukan_portofolio_mitigasi_risiko->pertanyaan_1 == 'Ya' ? 'selected' : '' }}>
@@ -53,7 +53,7 @@
                                 operasional sesuai dengan tingkat toleransi risiko individu dan portofolio.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_2"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->menentukan_portofolio_mitigasi_risiko != null && $auditee->menentukan_portofolio_mitigasi_risiko->pertanyaan_2 == 'Ya' ? 'selected' : '' }}>
@@ -71,7 +71,7 @@
                                 regulasi.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_3"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->menentukan_portofolio_mitigasi_risiko != null && $auditee->menentukan_portofolio_mitigasi_risiko->pertanyaan_3 == 'Ya' ? 'selected' : '' }}>
@@ -89,7 +89,9 @@
         <div class="card-footer d-flex justify-content-between align-items-center">
             <small class="text-muted">Terakhir diperbarui:
                 {{ $auditee->menentukan_portofolio_mitigasi_risiko != null ? $auditee->menentukan_portofolio_mitigasi_risiko->updated_at->diffForHumans() : 'Belum Disimpan' }}</small>
-            <button type="submit" class="btn btn-primary">Save</button>
+            @if ($status != 'view')
+                <button type="submit" class="btn btn-primary">Save</button>
+            @endif
         </div>
     </div> <!-- /. card -->
 </form>

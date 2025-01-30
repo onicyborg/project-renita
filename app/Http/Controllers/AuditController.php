@@ -6,13 +6,14 @@ use App\Models\Auditee;
 use App\Models\Form;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Ramsey\Uuid\Uuid;
 
 class AuditController extends Controller
 {
     public function index()
     {
-        $forms = Form::all();
+        $forms = Form::orderBy('created_at', 'desc')->get();
 
         return view('master-audit', compact('forms'));
     }
@@ -40,6 +41,10 @@ class AuditController extends Controller
     public function destroy($id)
     {
         $form = Form::findOrFail($id);
+        // Check if form has auditees
+        if ($form->auditee()->exists()) {
+            return back()->with('error', 'Form tidak dapat dihapus karena masih memiliki auditee!');
+        }
         $form->delete();
 
         return redirect()->route('master-audit')->with('success', 'Form successfully deleted!');
@@ -67,10 +72,32 @@ class AuditController extends Controller
     public function show($id)
     {
         $form = Form::findOrFail($id);
-        $auditee = $form->auditee;
+        $auditees = Auditee::where('form_id', $form->id)->orderBy('created_at', 'desc')->get(); // Mengambil semua auditee terkait form
 
-        return view('detail-audit', compact('form', 'auditee'));
+        // Menambahkan total_respon untuk setiap auditee
+        $auditees->each(function ($auditee) {
+            $auditee->total_respon = collect([
+                $auditee->strategi_organisasi,
+                $auditee->tujuan_organisasi,
+                $auditee->profile_resiko,
+                $auditee->issue_risiko,
+                $auditee->evaluasi_manajemen_risiko,
+                $auditee->arahan_manajemen_risiko,
+                $auditee->pemantauan_manajemen_risiko,
+                $auditee->pengumpulan_manajemen_risiko,
+                $auditee->menganalisis_risiko,
+                $auditee->memelihara_profil_risiko,
+                $auditee->mengartikulasikan_risiko,
+                $auditee->menentukan_portofolio_mitigasi_risiko,
+                $auditee->menanggapi_risiko,
+            ])->filter()->count();
+        });
+
+        // dd($auditees);
+
+        return view('detail-audit', compact('form', 'auditees'));
     }
+
 
     public function create_auditee(Request $request, $id)
     {
@@ -109,6 +136,35 @@ class AuditController extends Controller
     public function delete_auditee($id)
     {
         $auditee = Auditee::findOrFail($id);
+
+        $tables = [
+            'strategi_organisasi',
+            'tujuan_organisasi',
+            'profile_risiko',
+            'issue_risiko',
+            'evaluasi_manajemen_risiko',
+            'arahan_manajemen_risiko',
+            'pemantauan_manajemen_risiko',
+            'pengumpulan_manajemen_risiko',
+            'menganalisis_risiko',
+            'memelihara_profil_risiko',
+            'mengartikulasikan_risiko',
+            'menentukan_portofolio_mitigasi_risiko',
+            'menanggapi_risiko'
+        ];
+
+        // Check each table for existing data
+        foreach ($tables as $table) {
+            $exists = DB::table($table)
+                ->where('auditee_id', $auditee->id)
+                ->exists();
+
+            if ($exists) {
+                return back()
+                    ->with('error', 'Auditee sudah memberikan respon, anda tidak dapat menghapus auditee yang sudah memberi respon')
+                    ->withInput();
+            }
+        }
 
         $auditee->delete();
 
@@ -156,9 +212,23 @@ class AuditController extends Controller
 
         $auditee = $form->auditee()->where('token', $token)->with('strategi_organisasi', 'tujuan_organisasi', 'profile_resiko', 'issue_risiko', 'evaluasi_manajemen_risiko', 'arahan_manajemen_risiko', 'pemantauan_manajemen_risiko', 'pengumpulan_manajemen_risiko', 'menganalisis_risiko', 'memelihara_profil_risiko', 'mengartikulasikan_risiko', 'menentukan_portofolio_mitigasi_risiko', 'menanggapi_risiko')->first();
 
+        $status = 'create';
         // dd($auditee->tujuan_organisasi);
 
         // Tampilkan halaman kuisioner
-        return view('quisioner.form', compact('form', 'token', 'auditee'));
+        return view('quisioner.form', compact('form', 'token', 'auditee', 'status'));
+    }
+
+    public function check_response($id)
+    {
+
+        $auditee = Auditee::where('id', $id)->with('strategi_organisasi', 'tujuan_organisasi', 'profile_resiko', 'issue_risiko', 'evaluasi_manajemen_risiko', 'arahan_manajemen_risiko', 'pemantauan_manajemen_risiko', 'pengumpulan_manajemen_risiko', 'menganalisis_risiko', 'memelihara_profil_risiko', 'mengartikulasikan_risiko', 'menentukan_portofolio_mitigasi_risiko', 'menanggapi_risiko')->first();
+        $form = Form::findOrFail($auditee->form_id);
+        $token = $auditee->token;
+        $status = 'view';
+        // dd($auditee->tujuan_organisasi);
+
+        // Tampilkan halaman kuisioner
+        return view('quisioner.form', compact('form', 'token', 'auditee', 'status'));
     }
 }

@@ -18,11 +18,12 @@
                 <th>Nama</th>
                 <th>Jabatan</th>
                 <th>Token</th>
+                <th>Respon</th>
                 <th class="text-center">Action</th>
             </tr>
         </thead>
         <tbody>
-            @foreach ($auditee as $no => $item)
+            @foreach ($auditees as $no => $item)
                 <tr>
                     <td>{{ $no + 1 }}</td>
                     <td>{{ $item->name }}</td>
@@ -34,6 +35,7 @@
                             </button>
                         </span>
                     </td>
+                    <td>{{ $item->total_respon }} / 13</td>
                     <td class="text-center">
                         <button class="btn btn-sm dropdown-toggle more-horizontal" type="button" data-toggle="dropdown"
                             aria-haspopup="true" aria-expanded="false">
@@ -48,6 +50,9 @@
                                 data-target="#modalDeleteForm-{{ $item->id }}">
                                 Remove
                             </button>
+                            <a class="dropdown-item" href="{{ route('check.response', $item->id) }}" target="_blank">
+                                Check Response
+                            </a>
                         </div>
                     </td>
                 </tr>
@@ -154,7 +159,8 @@
     </div>
 </div>
 
-<div id="copyAlert" class="alert alert-success alert-dismissible fade d-none" role="alert" style="position: fixed; bottom: 1rem; right: 1rem; z-index: 1050; width: 400px;">
+<div id="copyAlert" class="alert alert-success alert-dismissible fade d-none" role="alert"
+    style="position: fixed; bottom: 1rem; right: 1rem; z-index: 1050; width: 400px;">
     <span class="fe fe-alert-circle fe-16 mr-2"></span>
     Berhasil! Token berhasil disalin ke clipboard.
     <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -180,9 +186,13 @@
                     targets: 2
                 }, // Jabatan
                 {
-                    width: "47%",
+                    width: "44%",
                     targets: 3
                 }, // Token
+                {
+                    width: "3%",
+                    targets: 3
+                }, // Respon
                 {
                     width: "10%",
                     targets: 4

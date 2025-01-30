@@ -35,7 +35,7 @@
                                 atau komite eksekutif.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_1"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->pemantauan_manajemen_risiko != null && $auditee->pemantauan_manajemen_risiko->pertanyaan_1 == 'Ya' ? 'selected' : '' }}>
@@ -51,7 +51,7 @@
                                 appetite risiko dan batas toleransi risiko organisasi.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_2"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->pemantauan_manajemen_risiko != null && $auditee->pemantauan_manajemen_risiko->pertanyaan_2 == 'Ya' ? 'selected' : '' }}>
@@ -69,7 +69,7 @@
                                 mengatasi penyebab utamanya.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_3"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->pemantauan_manajemen_risiko != null && $auditee->pemantauan_manajemen_risiko->pertanyaan_3 == 'Ya' ? 'selected' : '' }}>
@@ -86,7 +86,7 @@
                                 ditetapkan.</td>
                             <td>
                                 <select class="custom-select text-center" id="custom-select" name="pertanyaan_4"
-                                    required>
+                                    required {{ $status == 'view' ? 'disabled' : '' }}>
                                     <option value="">- Pilih -</option>
                                     <option value="Ya"
                                         {{ $auditee->pemantauan_manajemen_risiko != null && $auditee->pemantauan_manajemen_risiko->pertanyaan_4 == 'Ya' ? 'selected' : '' }}>
@@ -104,7 +104,9 @@
         <div class="card-footer d-flex justify-content-between align-items-center">
             <small class="text-muted">Terakhir diperbarui:
                 {{ $auditee->pemantauan_manajemen_risiko != null ? $auditee->pemantauan_manajemen_risiko->updated_at->diffForHumans() : 'Belum Disimpan' }}</small>
-            <button type="submit" class="btn btn-primary">Save</button>
+            @if ($status != 'view')
+                <button type="submit" class="btn btn-primary">Save</button>
+            @endif
         </div>
     </div> <!-- /. card -->
 </form>

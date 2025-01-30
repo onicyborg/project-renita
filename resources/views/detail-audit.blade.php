@@ -21,9 +21,6 @@
                                         <a class="nav-link" id="v-pills-profile-tab" data-toggle="pill"
                                             href="#v-pills-profile" role="tab" aria-controls="v-pills-profile"
                                             aria-selected="false">Manage Auditee</a>
-                                        <a class="nav-link" id="v-pills-messages-tab" data-toggle="pill"
-                                            href="#v-pills-messages" role="tab" aria-controls="v-pills-messages"
-                                            aria-selected="false">Respon Perorangan</a>
                                     </div>
                                 </div>
                                 <div class="col-10">
@@ -75,18 +72,6 @@
                                             aria-labelledby="v-pills-profile-tab">
                                             @include('section-auditee.master-auditee')
                                         </div>
-                                        <div class="tab-pane fade mb-4" id="v-pills-messages" role="tabpanel"
-                                            aria-labelledby="v-pills-messages-tab"> Anim pariatur cliche reprehenderit, enim
-                                            eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                            non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                                            eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                            single-origin coffee nulla assumenda shoreditch et. </div>
-                                        <div class="tab-pane fade mb-4" id="v-pills-settings" role="tabpanel"
-                                            aria-labelledby="v-pills-settings-tab"> Anim pariatur cliche reprehenderit, enim
-                                            eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute,
-                                            non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum
-                                            eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid
-                                            single-origin coffee nulla assumenda shoreditch et. </div>
                                     </div>
                                 </div>
                             </div>
@@ -170,7 +155,7 @@
             labels: ["Ya", "Tidak"],
             datasets: [{
                 data: [0, 0], // Initialize with zeros
-                backgroundColor: ["#FF6384", "#36A2EB"],
+                backgroundColor: ["#36A2EB", "#FF6384"],
                 borderColor: "#ddd",
                 borderWidth: 1,
             }],
@@ -183,6 +168,15 @@
                 icon: 'success',
                 title: 'Berhasil!',
                 text: '{{ session('success') }}',
+                confirmButtonText: 'OK'
+            });
+        @endif
+
+        @if (session('error'))
+            Swal.fire({
+                icon: 'error',
+                title: 'Error!',
+                text: '{{ session('error') }}',
                 confirmButtonText: 'OK'
             });
         @endif
