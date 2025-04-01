@@ -27,6 +27,7 @@ class TujuanOrganisasi extends Model
         'pertanyaan_11',
         'pertanyaan_12',
         'pertanyaan_13',
+        'kritik_saran',
         'form_id',
         'auditee_id',
     ];

@@ -15,8 +15,11 @@ class Form extends Model
 
     protected $fillable = [
         'company_name',
+        'periode_audit', // Perubahan dari 'tahun_audit' ke 'periode_audit'
+        'deskripsi',
         'user_id',
     ];
+
 
     public function user()
     {

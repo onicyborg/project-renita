@@ -52,6 +52,7 @@ class ProfileRisiko extends Model
         'pertanyaan_18_terjadi',
         'pertanyaan_19_dampak',
         'pertanyaan_19_terjadi',
+        'kritik_saran',
         'form_id',
         'auditee_id',
     ];

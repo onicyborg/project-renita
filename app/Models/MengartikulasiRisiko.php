@@ -19,6 +19,7 @@ class MengartikulasiRisiko extends Model
         'pertanyaan_3',
         'pertanyaan_4',
         'pertanyaan_5',
+        'kritik_saran',
         'form_id',
         'auditee_id',
     ];

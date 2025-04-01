@@ -16,6 +16,7 @@ return new class extends Migration
             $table->enum('pertanyaan_1', ['Ya', 'Tidak']);
             $table->enum('pertanyaan_2', ['Ya', 'Tidak']);
             $table->enum('pertanyaan_3', ['Ya', 'Tidak']);
+            $table->text('kritik_saran');
             $table->uuid('form_id');
             $table->uuid('auditee_id');
             $table->timestamps();

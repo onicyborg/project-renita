@@ -17,6 +17,7 @@ class QuisionerController extends Controller
                 'pertanyaan_2' => $request->pertanyaan_2,
                 'pertanyaan_3' => $request->pertanyaan_3,
                 'pertanyaan_4' => $request->pertanyaan_4,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         } else {
@@ -25,6 +26,7 @@ class QuisionerController extends Controller
                 'pertanyaan_2' => $request->pertanyaan_2,
                 'pertanyaan_3' => $request->pertanyaan_3,
                 'pertanyaan_4' => $request->pertanyaan_4,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         }
@@ -51,6 +53,7 @@ class QuisionerController extends Controller
                 'pertanyaan_11' => $request->pertanyaan_11,
                 'pertanyaan_12' => $request->pertanyaan_12,
                 'pertanyaan_13' => $request->pertanyaan_13,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         } else {
@@ -68,6 +71,7 @@ class QuisionerController extends Controller
                 'pertanyaan_11' => $request->pertanyaan_11,
                 'pertanyaan_12' => $request->pertanyaan_12,
                 'pertanyaan_13' => $request->pertanyaan_13,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         }
@@ -119,6 +123,7 @@ class QuisionerController extends Controller
                 'pertanyaan_18_terjadi' => $request->pertanyaan_18_terjadi,
                 'pertanyaan_19_dampak' => $request->pertanyaan_19_dampak,
                 'pertanyaan_19_terjadi' => $request->pertanyaan_19_terjadi,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         } else {
@@ -161,6 +166,7 @@ class QuisionerController extends Controller
                 'pertanyaan_18_terjadi' => $request->pertanyaan_18_terjadi,
                 'pertanyaan_19_dampak' => $request->pertanyaan_19_dampak,
                 'pertanyaan_19_terjadi' => $request->pertanyaan_19_terjadi,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         }
@@ -194,6 +200,7 @@ class QuisionerController extends Controller
                 'pertanyaan_18' => $request->pertanyaan_18,
                 'pertanyaan_19' => $request->pertanyaan_19,
                 'pertanyaan_20' => $request->pertanyaan_20,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         } else {
@@ -218,6 +225,7 @@ class QuisionerController extends Controller
                 'pertanyaan_18' => $request->pertanyaan_18,
                 'pertanyaan_19' => $request->pertanyaan_19,
                 'pertanyaan_20' => $request->pertanyaan_20,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         }
@@ -238,6 +246,7 @@ class QuisionerController extends Controller
                 'pertanyaan_5' => $request->pertanyaan_5,
                 'pertanyaan_6' => $request->pertanyaan_6,
                 'pertanyaan_7' => $request->pertanyaan_7,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         } else {
@@ -249,6 +258,7 @@ class QuisionerController extends Controller
                 'pertanyaan_5' => $request->pertanyaan_5,
                 'pertanyaan_6' => $request->pertanyaan_6,
                 'pertanyaan_7' => $request->pertanyaan_7,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         }
@@ -267,6 +277,7 @@ class QuisionerController extends Controller
                 'pertanyaan_3' => $request->pertanyaan_3,
                 'pertanyaan_4' => $request->pertanyaan_4,
                 'pertanyaan_5' => $request->pertanyaan_5,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         } else {
@@ -276,6 +287,7 @@ class QuisionerController extends Controller
                 'pertanyaan_3' => $request->pertanyaan_3,
                 'pertanyaan_4' => $request->pertanyaan_4,
                 'pertanyaan_5' => $request->pertanyaan_5,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         }
@@ -293,6 +305,7 @@ class QuisionerController extends Controller
                 'pertanyaan_2' => $request->pertanyaan_2,
                 'pertanyaan_3' => $request->pertanyaan_3,
                 'pertanyaan_4' => $request->pertanyaan_4,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         } else {
@@ -301,6 +314,7 @@ class QuisionerController extends Controller
                 'pertanyaan_2' => $request->pertanyaan_2,
                 'pertanyaan_3' => $request->pertanyaan_3,
                 'pertanyaan_4' => $request->pertanyaan_4,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         }
@@ -322,6 +336,7 @@ class QuisionerController extends Controller
                 'pertanyaan_6' => $request->pertanyaan_6,
                 'pertanyaan_7' => $request->pertanyaan_7,
                 'pertanyaan_8' => $request->pertanyaan_8,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         } else {
@@ -334,6 +349,7 @@ class QuisionerController extends Controller
                 'pertanyaan_6' => $request->pertanyaan_6,
                 'pertanyaan_7' => $request->pertanyaan_7,
                 'pertanyaan_8' => $request->pertanyaan_8,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         }
@@ -355,6 +371,7 @@ class QuisionerController extends Controller
                 'pertanyaan_6' => $request->pertanyaan_6,
                 'pertanyaan_7' => $request->pertanyaan_7,
                 'pertanyaan_8' => $request->pertanyaan_8,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         } else {
@@ -367,6 +384,7 @@ class QuisionerController extends Controller
                 'pertanyaan_6' => $request->pertanyaan_6,
                 'pertanyaan_7' => $request->pertanyaan_7,
                 'pertanyaan_8' => $request->pertanyaan_8,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         }
@@ -387,6 +405,7 @@ class QuisionerController extends Controller
                 'pertanyaan_5' => $request->pertanyaan_5,
                 'pertanyaan_6' => $request->pertanyaan_6,
                 'pertanyaan_7' => $request->pertanyaan_7,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         } else {
@@ -398,6 +417,7 @@ class QuisionerController extends Controller
                 'pertanyaan_5' => $request->pertanyaan_5,
                 'pertanyaan_6' => $request->pertanyaan_6,
                 'pertanyaan_7' => $request->pertanyaan_7,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         }
@@ -416,6 +436,7 @@ class QuisionerController extends Controller
                 'pertanyaan_3' => $request->pertanyaan_3,
                 'pertanyaan_4' => $request->pertanyaan_4,
                 'pertanyaan_5' => $request->pertanyaan_5,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         } else {
@@ -425,6 +446,7 @@ class QuisionerController extends Controller
                 'pertanyaan_3' => $request->pertanyaan_3,
                 'pertanyaan_4' => $request->pertanyaan_4,
                 'pertanyaan_5' => $request->pertanyaan_5,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         }
@@ -441,6 +463,7 @@ class QuisionerController extends Controller
                 'pertanyaan_1' => $request->pertanyaan_1,
                 'pertanyaan_2' => $request->pertanyaan_2,
                 'pertanyaan_3' => $request->pertanyaan_3,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         } else {
@@ -448,6 +471,7 @@ class QuisionerController extends Controller
                 'pertanyaan_1' => $request->pertanyaan_1,
                 'pertanyaan_2' => $request->pertanyaan_2,
                 'pertanyaan_3' => $request->pertanyaan_3,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         }
@@ -466,6 +490,7 @@ class QuisionerController extends Controller
                 'pertanyaan_3' => $request->pertanyaan_3,
                 'pertanyaan_4' => $request->pertanyaan_4,
                 'pertanyaan_5' => $request->pertanyaan_5,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         } else {
@@ -475,6 +500,7 @@ class QuisionerController extends Controller
                 'pertanyaan_3' => $request->pertanyaan_3,
                 'pertanyaan_4' => $request->pertanyaan_4,
                 'pertanyaan_5' => $request->pertanyaan_5,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         }

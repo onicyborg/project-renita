@@ -25,7 +25,7 @@
                                         <tr>
                                             <th>#</th>
                                             <th>Company Name</th>
-                                            <th>Year of Audit</th>
+                                            <th>Periode of Audit</th>
                                             <th>Description</th>
                                             <th>Created At</th>
                                             <th class="text-center">Action</th>
@@ -36,7 +36,7 @@
                                             <tr>
                                                 <td>{{ $no + 1 }}</td>
                                                 <td>{{ $item->company_name }}</td>
-                                                <td>{{ $item->tahun_audit }}</td>
+                                                <td>{{ \Carbon\Carbon::createFromFormat('Y-m', $item->periode_audit)->translatedFormat('F Y') }}</td>
                                                 <td>{{ $item->deskripsi }}</td>
                                                 <td>{{ $item->created_at->diffForHumans() }}</td>
                                                 <td class="text-center">
@@ -90,9 +90,9 @@
                                                                         value="{{ $item->company_name }}" required>
                                                                 </div>
                                                                 <div class="form-group">
-                                                                    <label for="tahun_audit">Year of Audit</label>
-                                                                    <input type="number" class="form-control"
-                                                                        name="tahun_audit" value="{{ $item->tahun_audit }}"
+                                                                    <label for="periode_audit">Periode of Audit</label>
+                                                                    <input type="month" class="form-control"
+                                                                        name="periode_audit" value="{{ $item->periode_audit }}"
                                                                         required>
                                                                 </div>
                                                                 <div class="form-group">
@@ -171,8 +171,8 @@
                             <input type="text" class="form-control" name="company_name" required>
                         </div>
                         <div class="form-group">
-                            <label for="tahun_audit">Year of Audit</label>
-                            <input type="number" class="form-control" name="tahun_audit" required>
+                            <label for="periode_audit">Periode of Audit</label>
+                            <input type="month" class="form-control" name="periode_audit" required>
                         </div>
                         <div class="form-group">
                             <label for="deskripsi">Description</label>

@@ -22,6 +22,7 @@ class MenganalisisRisiko extends Model
         'pertanyaan_6',
         'pertanyaan_7',
         'pertanyaan_8',
+        'kritik_saran',
         'form_id',
         'auditee_id',
     ];

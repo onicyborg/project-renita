@@ -17,6 +17,7 @@ class MenentukanPortofolioMitigasiRisiko extends Model
         'pertanyaan_1',
         'pertanyaan_2',
         'pertanyaan_3',
+        'kritik_saran',
         'form_id',
         'auditee_id',
     ];

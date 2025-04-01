@@ -21,6 +21,7 @@ class EvaluasiManajemenRisiko extends Model
         'pertanyaan_5',
         'pertanyaan_6',
         'pertanyaan_7',
+        'kritik_saran',
         'form_id',
         'auditee_id',
     ];

@@ -34,10 +34,10 @@
                         <polygon class="st0" points="78,33 15,33 24,15 87,15" />
                     </g>
                 </svg>
-                <h1 class="h4 mb-3 mt-3">A-Risk - Quisioner</h1>
+                <h1 class="h4 mb-3 mt-3">IT-RiskLens - Quisioner</h1>
 
                 <!-- Judul Kuisioner -->
-                <h2 class="h5 mb-2">Survey Kepuasan Pelanggan</h2>
+                <h2 class="h5 mb-2">Survey Audit {{ $form->company_name }} Periode {{ \Carbon\Carbon::createFromFormat('Y-m', $form->periode_audit)->translatedFormat('F Y') }}</h2>
                 <!-- Deskripsi Kuisioner -->
                 <p class="text-muted mb-4">
                     Silakan masukkan token kuisioner Anda untuk memulai pengisian survey ini.

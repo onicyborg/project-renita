@@ -117,6 +117,10 @@
                         </tr>
                     </tbody>
                 </table>
+                <div class="form-group mt-4">
+                    <label for="kritik_saran"><strong>Kritik dan Saran</strong></label>
+                    <textarea class="form-control" id="kritik_saran" name="kritik_saran" rows="4" {{ $status == 'view' ? 'readonly' : '' }}>{{ $auditee->mengartikulasikan_risiko != null && $auditee->mengartikulasikan_risiko->kritik_saran != null ? $auditee->mengartikulasikan_risiko->kritik_saran : '' }}</textarea>
+                </div>
             </div>
         </div> <!-- /. card-body -->
         <div class="card-footer d-flex justify-content-between align-items-center">

@@ -35,7 +35,7 @@
         <thead class="thead-light">
             <tr>
                 <th>Acuan</th>
-                <th>Tujuan Perusahaan</th>
+                <th>Kategori Risiko</th>
                 <th>Tingkat Dampak (1-5)</th>
                 <th>Kemungkinan Terjadi (1-5)</th>
             </tr>
@@ -274,7 +274,7 @@
             <tr>
                 <td>9</td>
                 <td>Insiden terkait perangkat keras terhadap
-                    kelangsungan operasional TI dan INI LANJUTANNYA APA ANJENK</td>
+                    kelangsungan operasional TI</td>
                 <td>
                     <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_9"></canvas>

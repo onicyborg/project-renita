@@ -18,6 +18,7 @@ class StrategiOrganisasi extends Model
         'pertanyaan_2',
         'pertanyaan_3',
         'pertanyaan_4',
+        'kritik_saran',
         'form_id',
         'auditee_id',
     ];

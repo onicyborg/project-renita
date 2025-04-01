@@ -31,8 +31,8 @@
                     <div class="mb-4">
                         @if ($status == 'view')
                             <h2 class="text-center">
-                                Quisioner Audit {{ $auditee->form->company_name }} Tahun
-                                {{ $auditee->form->tahun_audit }}
+                                Quisioner Audit {{ $auditee->form->company_name }} Periode
+                                {{ \Carbon\Carbon::createFromFormat('Y-m', $auditee->form->periode_audit)->translatedFormat('F Y') }}
                             </h2>
                             <p class="text-center text-muted">
                                 {{ $auditee->form->deskripsi }}
@@ -42,7 +42,8 @@
                             </p>
                         @else
                             <h2 class="text-center">
-                                Quisioner Audit {{ $form->company_name }} Tahun {{ $form->tahun_audit }}
+                                Quisioner Audit {{ $form->company_name }} Periode
+                                {{ \Carbon\Carbon::createFromFormat('Y-m', $auditee->form->periode_audit)->translatedFormat('F Y') }}
                             </h2>
                             <p class="text-center text-muted">
                                 {{ $form->deskripsi }}

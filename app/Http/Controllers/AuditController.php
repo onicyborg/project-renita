@@ -23,13 +23,13 @@ class AuditController extends Controller
         // Validasi input
         $request->validate([
             'company_name' => 'required|string|max:255',
-            'tahun_audit'  => 'required|integer',
+            'periode_audit'  => 'required',
             'deskripsi'    => 'required|string',
         ]);
 
         $newForm = new Form();
         $newForm->company_name = $request->company_name;
-        $newForm->tahun_audit = $request->tahun_audit;
+        $newForm->periode_audit = $request->periode_audit;
         $newForm->deskripsi = $request->deskripsi;
         $newForm->user_id = Auth::id();
 
@@ -55,13 +55,13 @@ class AuditController extends Controller
         // Validasi input
         $request->validate([
             'company_name' => 'required|string|max:255',
-            'tahun_audit'  => 'required|integer',
+            'periode_audit'  => 'required',
             'deskripsi'    => 'required|string',
         ]);
 
         $form = Form::findOrFail($id);
         $form->company_name = $request->company_name;
-        $form->tahun_audit = $request->tahun_audit;
+        $form->periode_audit = $request->periode_audit;
         $form->deskripsi = $request->deskripsi;
 
         $form->save();

@@ -34,6 +34,7 @@ class IssueRisiko extends Model
         'pertanyaan_18',
         'pertanyaan_19',
         'pertanyaan_20',
+        'kritik_saran',
         'form_id',
         'auditee_id',
     ];
