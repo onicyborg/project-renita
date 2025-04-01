@@ -74,6 +74,22 @@ class GetDataController extends Controller
         return response()->json($data);
     }
 
+    public function kritik_saran_section_1($id)
+    {
+        $data = DB::table('strategi_organisasi')
+            ->select('kritik_saran')
+            ->where('form_id', $id)
+            ->get();
+
+        // Handle empty data
+        if ($data->isEmpty()) {
+            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
+        }
+
+        // Kirim data ke view
+        return response()->json($data);
+    }
+
     public function section_2($id)
     {
         $data = DB::table('tujuan_organisasi')
@@ -227,6 +243,22 @@ class GetDataController extends Controller
 
         $total_auditee = DB::table('auditee')->where('form_id', $id)->count();
         $data->total_auditee = $total_auditee;
+        // Kirim data ke view
+        return response()->json($data);
+    }
+
+    public function kritik_saran_section_2($id)
+    {
+        $data = DB::table('tujuan_organisasi')
+            ->select('kritik_saran')
+            ->where('form_id', $id)
+            ->get();
+
+        // Handle empty data
+        if ($data->isEmpty()) {
+            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
+        }
+
         // Kirim data ke view
         return response()->json($data);
     }
@@ -638,6 +670,22 @@ class GetDataController extends Controller
         return response()->json($data);
     }
 
+    public function kritik_saran_section_3($id)
+    {
+        $data = DB::table('profile_risiko')
+            ->select('kritik_saran')
+            ->where('form_id', $id)
+            ->get();
+
+        // Handle empty data
+        if ($data->isEmpty()) {
+            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
+        }
+
+        // Kirim data ke view
+        return response()->json($data);
+    }
+
     public function section_4($id)
     {
         $data = DB::table('issue_risiko')
@@ -865,6 +913,22 @@ class GetDataController extends Controller
         return response()->json($data);
     }
 
+    public function kritik_saran_section_4($id)
+    {
+        $data = DB::table('issue_risiko')
+            ->select('kritik_saran')
+            ->where('form_id', $id)
+            ->get();
+
+        // Handle empty data
+        if ($data->isEmpty()) {
+            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
+        }
+
+        // Kirim data ke view
+        return response()->json($data);
+    }
+
     public function section_5($id)
     {
         $data = DB::table('evaluasi_manajemen_risiko')
@@ -920,6 +984,22 @@ class GetDataController extends Controller
         return response()->json($data);
     }
 
+    public function kritik_saran_section_5($id)
+    {
+        $data = DB::table('evaluasi_manajemen_risiko')
+            ->select('kritik_saran')
+            ->where('form_id', $id)
+            ->get();
+
+        // Handle empty data
+        if ($data->isEmpty()) {
+            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
+        }
+
+        // Kirim data ke view
+        return response()->json($data);
+    }
+
     public function section_6($id)
     {
         $data = DB::table('arahan_manajemen_risiko')
@@ -967,6 +1047,22 @@ class GetDataController extends Controller
         return response()->json($data);
     }
 
+    public function kritik_saran_section_6($id)
+    {
+        $data = DB::table('arahan_manajemen_risiko')
+            ->select('kritik_saran')
+            ->where('form_id', $id)
+            ->get();
+
+        // Handle empty data
+        if ($data->isEmpty()) {
+            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
+        }
+
+        // Kirim data ke view
+        return response()->json($data);
+    }
+
     public function section_7($id)
     {
         $data = DB::table('pemantauan_manajemen_risiko')
@@ -1006,6 +1102,22 @@ class GetDataController extends Controller
 
         $total_auditee = DB::table('auditee')->where('form_id', $id)->count();
         $data->total_auditee = $total_auditee == null ? 0 : $total_auditee;
+        // Kirim data ke view
+        return response()->json($data);
+    }
+
+    public function kritik_saran_section_7($id)
+    {
+        $data = DB::table('pemantauan_manajemen_risiko')
+            ->select('kritik_saran')
+            ->where('form_id', $id)
+            ->get();
+
+        // Handle empty data
+        if ($data->isEmpty()) {
+            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
+        }
+
         // Kirim data ke view
         return response()->json($data);
     }
@@ -1069,6 +1181,22 @@ class GetDataController extends Controller
         return response()->json($data);
     }
 
+    public function kritik_saran_section_8($id)
+    {
+        $data = DB::table('pengumpulan_manajemen_risiko')
+            ->select('kritik_saran')
+            ->where('form_id', $id)
+            ->get();
+
+        // Handle empty data
+        if ($data->isEmpty()) {
+            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
+        }
+
+        // Kirim data ke view
+        return response()->json($data);
+    }
+
     public function section_9($id)
     {
         $data = DB::table('menganalisis_risiko')
@@ -1128,6 +1256,22 @@ class GetDataController extends Controller
         return response()->json($data);
     }
 
+    public function kritik_saran_section_9($id)
+    {
+        $data = DB::table('menganalisis_risiko')
+            ->select('kritik_saran')
+            ->where('form_id', $id)
+            ->get();
+
+        // Handle empty data
+        if ($data->isEmpty()) {
+            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
+        }
+
+        // Kirim data ke view
+        return response()->json($data);
+    }
+
     public function section_10($id)
     {
         $data = DB::table('memelihara_profil_risiko')
@@ -1183,6 +1327,22 @@ class GetDataController extends Controller
         return response()->json($data);
     }
 
+    public function kritik_saran_section_10($id)
+    {
+        $data = DB::table('memelihara_profil_risiko')
+            ->select('kritik_saran')
+            ->where('form_id', $id)
+            ->get();
+
+        // Handle empty data
+        if ($data->isEmpty()) {
+            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
+        }
+
+        // Kirim data ke view
+        return response()->json($data);
+    }
+
     public function section_11($id)
     {
         $data = DB::table('mengartikulasikan_risiko')
@@ -1230,6 +1390,22 @@ class GetDataController extends Controller
         return response()->json($data);
     }
 
+    public function kritik_saran_section_11($id)
+    {
+        $data = DB::table('mengartikulasikan_risiko')
+            ->select('kritik_saran')
+            ->where('form_id', $id)
+            ->get();
+
+        // Handle empty data
+        if ($data->isEmpty()) {
+            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
+        }
+
+        // Kirim data ke view
+        return response()->json($data);
+    }
+
     public function section_12($id)
     {
         $data = DB::table('menentukan_portofolio_mitigasi_risiko')
@@ -1265,6 +1441,22 @@ class GetDataController extends Controller
 
         $total_auditee = DB::table('auditee')->where('form_id', $id)->count();
         $data->total_auditee = $total_auditee == null ? 0 : $total_auditee;
+        // Kirim data ke view
+        return response()->json($data);
+    }
+
+    public function kritik_saran_section_12($id)
+    {
+        $data = DB::table('menentukan_portofolio_mitigasi_risiko')
+            ->select('kritik_saran')
+            ->where('form_id', $id)
+            ->get();
+
+        // Handle empty data
+        if ($data->isEmpty()) {
+            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
+        }
+
         // Kirim data ke view
         return response()->json($data);
     }
@@ -1312,6 +1504,22 @@ class GetDataController extends Controller
 
         $total_auditee = DB::table('auditee')->where('form_id', $id)->count();
         $data->total_auditee = $total_auditee == null ? 0 : $total_auditee;
+        // Kirim data ke view
+        return response()->json($data);
+    }
+
+    public function kritik_saran_section_13($id)
+    {
+        $data = DB::table('menanggapi_risiko')
+            ->select('kritik_saran')
+            ->where('form_id', $id)
+            ->get();
+
+        // Handle empty data
+        if ($data->isEmpty()) {
+            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
+        }
+
         // Kirim data ke view
         return response()->json($data);
     }

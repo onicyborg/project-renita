@@ -7,7 +7,11 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="icon" href="favicon.ico">
-    <title>A-Risk - Login</title>
+    @if ($status == 'view')
+        <title>A-Risk - Response {{ $auditee->name }} ({{ $auditee->jabatan }})</title>
+    @else
+        <title>A-Risk - Quisioner</title>
+    @endif
     <!-- Simple bar CSS -->
     <link rel="stylesheet" href="{{ asset('css/simplebar.css') }}">
     <!-- Fonts CSS -->

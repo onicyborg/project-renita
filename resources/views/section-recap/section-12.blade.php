@@ -67,6 +67,21 @@
             </tr>
         </tbody>
     </table>
+    <h4 class="mt-4 text-center">Kritik dan Saran Section 12</h4>
+    <div id="kritikSaranCarousel-section-12" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner" id="kritikSaranContent-section-12">
+            <div class="carousel-item active">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#kritikSaranCarousel-section-12" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#kritikSaranCarousel-section-12" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
 </div>
 
 
@@ -156,6 +171,43 @@
 
             // Fetch initial data (replace 1 with your actual form_id)
             fetchData_section_12('{{ $form->id }}');
+        });
+
+        $(document).ready(function() {
+            let formId = '{{ $form->id }}'; // Ganti dengan ID form yang sesuai
+            $.ajax({
+                url: `/kritik-saran-section-12/${formId}`,
+                method: "GET",
+                success: function(data) {
+                    let container = $("#kritikSaranContent-section-12");
+                    container.empty(); // Kosongkan kontainer sebelum menambahkan data baru
+
+                    if (data.kritik_saran === "Tidak ada kritik dan saran") {
+                        container.append(`<div class="carousel-item active">
+                        <div class="card shadow-sm p-3">
+                            <p class="text-dark text-center">Tidak ada kritik dan saran tersedia</p>
+                        </div>
+                    </div>`);
+                        return;
+                    }
+
+                    $.each(data, function(index, item) {
+                        let isActive = index === 0 ? "active" : "";
+                        container.append(`<div class="carousel-item ${isActive}">
+                        <div class="card shadow-sm p-4">
+                            <p class="text-primary font-weight-bold text-center"
+                            style="font-size: 1.2rem;">"${item.kritik_saran}"</p>
+                        </div>
+                    </div>`);
+                    });
+
+                    // Aktifkan carousel setelah data dimuat
+                    $('#kritikSaranCarousel-section-12').carousel();
+                },
+                error: function() {
+                    console.error("Error mengambil data");
+                }
+            });
         });
     </script>
 @endpush
