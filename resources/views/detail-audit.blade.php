@@ -1,7 +1,7 @@
 @extends('layouts.master')
 
 @section('title')
-    Dashboard
+    Detail Audit
 @endsection
 
 @section('content')

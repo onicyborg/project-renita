@@ -44,7 +44,7 @@
             <tr>
                 <td>1</td>
                 <td>Kegagalan pengambilan keputusan investasi
-                    TI, definisi dan portofolio</td>
+                    TI, definisi dan portofolio <span class="badge badge-warning">High</span></td>
                 <td>
                     <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_1"></canvas>
@@ -73,7 +73,7 @@
             <tr>
                 <td>2</td>
                 <td>Kegagalan atau penundaan manajemen siklus
-                    hidup program dan proyek</td>
+                    hidup program dan proyek <span class="badge badge-danger">Very High</span></td>
                 <td>
                     <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_2"></canvas>
@@ -101,7 +101,7 @@
             </tr>
             <tr>
                 <td>3</td>
-                <td>Ketidakefisienan biaya dan pengawasan TI</td>
+                <td>Ketidakefisienan biaya dan pengawasan TI <span class="badge badge-info">Low</span></td>
                 <td>
                     <div style="width: 120px; height: 120px; margin: auto;">
                         <canvas id="dampak_3"></canvas>
