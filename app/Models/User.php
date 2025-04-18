@@ -62,6 +62,11 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
+    public function form()
+    {
+        return $this->hasMany(Form::class, 'user_id', 'id');
+    }
+
     /**
      * Boot the model.
      */

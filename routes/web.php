@@ -90,5 +90,11 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/data-section-13/{id}', [GetDataController::class, 'section_13'])->name('data.section-13');
     Route::get('/kritik-saran-section-13/{id}', [GetDataController::class, 'kritik_saran_section_13'])->name('data.kritik-saran-section-13');
 
+    Route::get('/profile-settings', function () {
+        return view('profile');
+    })->name('profile-settings');
+    Route::put('/change-password', [AuthController::class, 'change_password'])->name('change.password');
+    Route::put('/update-profile', [AuthController::class, 'update_profile'])->name('update.profile');
+
     Route::get('/logout', [AuthController::class, 'logout'])->name('logout');
 });
