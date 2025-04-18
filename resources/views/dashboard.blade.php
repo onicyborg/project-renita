@@ -12,7 +12,7 @@
 
                 <div class="row">
                     <!-- DateTime Card -->
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-6 col-lg-4">
                         <div class="card shadow mb-4">
                             <div class="card-body">
                                 <div class="row align-items-center">
@@ -30,7 +30,7 @@
                     </div>
 
                     <!-- Total Audit Card -->
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-6 col-lg-4">
                         <div class="card shadow mb-4">
                             <div class="card-body">
                                 <div class="row align-items-center">
@@ -48,14 +48,21 @@
                     </div>
 
                     <!-- Quick Access Card -->
-                    <div class="col-md-6 col-lg-3">
+                    <div class="col-md-6 col-lg-4">
                         <div class="card shadow mb-4">
                             <div class="card-body">
-                                <h3 class="h5 mb-0">Quick Access</h3>
-                                <p class="small text-muted mb-0">Manage your audits</p>
-                                <a href="{{ route('master-audit') }}" class="btn btn-primary btn-sm mt-2">
-                                    <i class="fe fe-plus fe-16 mr-2"></i>Manage Audit
-                                </a>
+                                <div class="row align-items-center">
+                                    <div class="col">
+                                        <h3 class="h5 mb-0">Quick Access</h3>
+                                        <p class="small text-muted mb-0">Manage your audits</p>
+                                        <a href="{{ route('master-audit') }}" class="btn btn-primary btn-sm">
+                                            <i class="fe fe-plus fe-16 mr-2"></i>Manage Audit
+                                        </a>
+                                    </div>
+                                    <div class="col-auto">
+                                        <i class="fe fe-star fe-24 text-muted"></i>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -89,8 +96,8 @@
                                         </p>
                                     </div>
                                     <div class="col-md-4 text-center">
-                                        <img src="{{ asset('assets/images/ilustrasi_audit.png') }}"
-                                            alt="Audit Illustration" class="img-fluid">
+                                        <img src="{{ asset('assets/images/ilustrasi_audit.png') }}" alt="Audit Illustration"
+                                            class="img-fluid">
                                     </div>
                                 </div>
                             </div>
