@@ -1,16 +1,31 @@
-<h3 class="mt-3 text-center">Section 6 (Identifikasi optimasi risiko teknologi informasi Bagian Kedua: Arahan Manajemen
-    Risiko)</h3>
+@php
+    $questions = [
+        'Apakah organisasi memiliki rencana penanganan risiko keamanan informasi yang terdokumentasi?',
+        'Apakah rencana tersebut selaras dengan tujuan strategis organisasi?',
+        'Apakah rencana tersebut selaras dengan arsitektur perusahaan?',
+        'Apakah rencana tersebut mencakup praktik manajemen dan solusi keamanan yang tepat?',
+        'Apakah rencana tersebut menetapkan sumber daya, tanggung jawab, dan prioritas dalam pengelolaan risiko?',
+        'Apakah organisasi memiliki inventaris komponen solusi yang digunakan untuk mengelola risiko keamanan?',
+        'Apakah proposal implementasi keamanan didukung oleh business case yang telah disetujui?',
+        'Apakah proposal tersebut mencakup perencanaan pendanaan dan pembagian tanggung jawab?',
+        'Apakah organisasi memberikan masukan dalam desain dan pengembangan solusi keamanan?',
+        'Apakah organisasi menyelenggarakan pelatihan keamanan informasi dan privasi secara berkala?',
+        'Apakah organisasi melakukan program peningkatan kesadaran (awareness) keamanan informasi?',
+        'Apakah prosedur keamanan telah diintegrasikan dalam perencanaan, desain, implementasi, dan monitoring sistem?',
+        'Apakah organisasi memiliki mekanisme untuk pencegahan insiden keamanan?',
+        'Apakah organisasi memiliki mekanisme untuk deteksi kejadian keamanan?',
+        'Apakah organisasi memiliki mekanisme untuk respons terhadap insiden keamanan?',
+        'Apakah organisasi telah menetapkan cara untuk mengukur efektivitas pengelolaan keamanan?',
+        'Apakah hasil pengukuran digunakan untuk mengevaluasi dan meningkatkan efektivitas keamanan?',
+    ];
+@endphp
+
+<h3 class="mt-3 text-center">Risk Treatment Plan</h3>
 
 <!-- Deskripsi -->
 <p class="mt-3">
-    Bagian kedua dari Optimasi Risiko Teknologi Informasi (TI) ini bertujuan untuk mengidentifikasi bagaimana organisasi
-    mengarahkan dan mengintegrasikan pengelolaan risiko TI ke dalam praktik operasional. Kuisioner ini berfokus pada
-    penilaian pendekatan strategis, termasuk komunikasi risiko, eskalasi, dan implementasi mekanisme pengelolaan risiko.
-
-    <br>
     Untuk setiap pernyataan yang diberikan, harap pilih <strong>Ya</strong> atau <strong>Tidak</strong> sesuai dengan
-    kondisi yang berlaku di organisasi
-    Anda.
+    kondisi yang berlaku di organisasi Anda.
 </p>
 
 <div class="text-end mb-3">
@@ -27,82 +42,23 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Mengarahkan penerjemahan dan integrasi strategi risiko TI ke
-                    dalam praktik manajemen risiko dan kegiatan operasional.</td>
-                <td>
-                    <div style="width: 120px; height: 120px; margin: auto;">
-                        <canvas id="section_6_1"></canvas>
-                    </div>
-                    <div class="mt-2 text-center">
-                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
-                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Mengarahkan pengembangan rencana komunikasi risiko yang
-                    mencakup seluruh level organisasi.</td>
-                <td>
-                    <div style="width: 120px; height: 120px; margin: auto;">
-                        <canvas id="section_6_2"></canvas>
-                    </div>
-                    <div class="mt-2 text-center">
-                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
-                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Mengarahkan implementasi mekanisme yang tepat untuk
-                    merespons perubahan risiko dengan cepat dan melaporkannya
-                    secara langsung ke tingkat manajemen yang sesuai, didukung oleh
-                    prinsip-prinsip eskalasi yang telah disepakati (apa yang harus
-                    dilaporkan, kapan, di mana, dan bagaimana).</td>
-                <td>
-                    <div style="width: 120px; height: 120px; margin: auto;">
-                        <canvas id="section_6_3"></canvas>
-                    </div>
-                    <div class="mt-2 text-center">
-                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
-                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Mengarahkan agar risiko, peluang, masalah, dan kekhawatiran
-                    dapat diidentifikasi dan dilaporkan oleh siapa saja kepada pihak
-                    yang sesuai kapan saja. Risiko harus dikelola sesuai dengan
-                    kebijakan dan prosedur yang telah dipublikasikan, serta
-                    diekskalasi kepada pengambil keputusan yang relevan.</td>
-                <td>
-                    <div style="width: 120px; height: 120px; margin: auto;">
-                        <canvas id="section_6_4"></canvas>
-                    </div>
-                    <div class="mt-2 text-center">
-                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
-                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Mengidentifikasi tujuan utama dan metrik dari proses tata kelola
-                    dan manajemen risiko yang perlu dipantau, serta menyetujui
-                    pendekatan, metode, teknik, dan proses untuk mengumpulkan dan
-                    melaporkan informasi pengukuran.</td>
-                <td>
-                    <div style="width: 120px; height: 120px; margin: auto;">
-                        <canvas id="section_6_5"></canvas>
-                    </div>
-                    <div class="mt-2 text-center">
-                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
-                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
-                    </div>
-                </td>
-            </tr>
+            @foreach ($questions as $i => $question)
+                <tr>
+                    <td>{{ $question }}</td>
+                    <td>
+                        <div style="width: 120px; height: 120px; margin: auto;">
+                            <canvas id="section_6_{{ $i + 1 }}"></canvas>
+                        </div>
+                        <div class="mt-2 text-center">
+                            <span class="badge" style="background-color: #36A2EB;">Ya</span>
+                            <span class="badge" style="background-color: #FF6384;">Tidak</span>
+                        </div>
+                    </td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
-    <h4 class="mt-4 text-center">Kritik dan Saran Section 6</h4>
+    <h4 class="mt-4 text-center">Kritik dan Saran Risk Treatment Plan</h4>
     <div id="kritikSaranCarousel-section-6" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" id="kritikSaranContent-section-6">
             <div class="carousel-item active">
@@ -122,7 +78,7 @@
 @push('scripts')
     <script>
         // Chart instances
-        let section_6_1, section_6_2, section_6_3, section_6_4, section_6_5;
+        let section_6_charts = [];
 
         // Fungsi untuk inisialisasi chart
         function createChart(canvasId, data) {
@@ -149,35 +105,15 @@
                 const data = await response.json();
 
                 if (data) {
-                    section_6_1.data.datasets[0].data = [
-                        data.pertanyaan_1_jawaban_ya,
-                        data.pertanyaan_1_jawaban_tidak,
-                    ];
-                    section_6_1.update();
-
-                    section_6_2.data.datasets[0].data = [
-                        data.pertanyaan_2_jawaban_ya,
-                        data.pertanyaan_2_jawaban_tidak,
-                    ];
-                    section_6_2.update();
-
-                    section_6_3.data.datasets[0].data = [
-                        data.pertanyaan_3_jawaban_ya,
-                        data.pertanyaan_3_jawaban_tidak,
-                    ];
-                    section_6_3.update();
-
-                    section_6_4.data.datasets[0].data = [
-                        data.pertanyaan_4_jawaban_ya,
-                        data.pertanyaan_4_jawaban_tidak,
-                    ];
-                    section_6_4.update();
-
-                    section_6_5.data.datasets[0].data = [
-                        data.pertanyaan_5_jawaban_ya,
-                        data.pertanyaan_5_jawaban_tidak,
-                    ];
-                    section_6_5.update();
+                    for (let i = 1; i <= {{ count($questions) }}; i++) {
+                        const chart = section_6_charts[i - 1];
+                        if (!chart) continue;
+                        chart.data.datasets[0].data = [
+                            data[`pertanyaan_${i}_jawaban_ya`],
+                            data[`pertanyaan_${i}_jawaban_tidak`],
+                        ];
+                        chart.update();
+                    }
 
 
                     // Update last updated timestamp if needed
@@ -203,25 +139,11 @@
         // Initialize charts
         document.addEventListener('DOMContentLoaded', function() {
             // Create charts
-            section_6_1 = createChart("section_6_1", {
-                ...dataTemplate2
-            });
-
-            section_6_2 = createChart("section_6_2", {
-                ...dataTemplate2
-            });
-
-            section_6_3 = createChart("section_6_3", {
-                ...dataTemplate2
-            });
-
-            section_6_4 = createChart("section_6_4", {
-                ...dataTemplate2
-            });
-
-            section_6_5 = createChart("section_6_5", {
-                ...dataTemplate2
-            });
+            for (let i = 1; i <= {{ count($questions) }}; i++) {
+                section_6_charts.push(createChart(`section_6_${i}`, {
+                    ...dataTemplate2
+                }));
+            }
 
             // Fetch initial data (replace 1 with your actual form_id)
             fetchData_section_6('{{ $form->id }}');

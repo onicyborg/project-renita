@@ -38,12 +38,6 @@ Route::post('/submit-section-4/{id}/{token}', [QuisionerController::class, 'subm
 Route::post('/submit-section-5/{id}/{token}', [QuisionerController::class, 'submit_section_5'])->name('submit.section-5');
 Route::post('/submit-section-6/{id}/{token}', [QuisionerController::class, 'submit_section_6'])->name('submit.section-6');
 Route::post('/submit-section-7/{id}/{token}', [QuisionerController::class, 'submit_section_7'])->name('submit.section-7');
-Route::post('/submit-section-8/{id}/{token}', [QuisionerController::class, 'submit_section_8'])->name('submit.section-8');
-Route::post('/submit-section-9/{id}/{token}', [QuisionerController::class, 'submit_section_9'])->name('submit.section-9');
-Route::post('/submit-section-10/{id}/{token}', [QuisionerController::class, 'submit_section_10'])->name('submit.section-10');
-Route::post('/submit-section-11/{id}/{token}', [QuisionerController::class, 'submit_section_11'])->name('submit.section-11');
-Route::post('/submit-section-12/{id}/{token}', [QuisionerController::class, 'submit_section_12'])->name('submit.section-12');
-Route::post('/submit-section-13/{id}/{token}', [QuisionerController::class, 'submit_section_13'])->name('submit.section-13');
 
 
 Route::group(['middleware' => 'auth'], function () {
@@ -77,18 +71,6 @@ Route::group(['middleware' => 'auth'], function () {
     Route::get('/kritik-saran-section-6/{id}', [GetDataController::class, 'kritik_saran_section_6'])->name('data.kritik-saran-section-6');
     Route::get('/data-section-7/{id}', [GetDataController::class, 'section_7'])->name('data.section-7');
     Route::get('/kritik-saran-section-7/{id}', [GetDataController::class, 'kritik_saran_section_7'])->name('data.kritik-saran-section-7');
-    Route::get('/data-section-8/{id}', [GetDataController::class, 'section_8'])->name('data.section-8');
-    Route::get('/kritik-saran-section-8/{id}', [GetDataController::class, 'kritik_saran_section_8'])->name('data.kritik-saran-section-8');
-    Route::get('/data-section-9/{id}', [GetDataController::class, 'section_9'])->name('data.section-9');
-    Route::get('/kritik-saran-section-9/{id}', [GetDataController::class, 'kritik_saran_section_9'])->name('data.kritik-saran-section-9');
-    Route::get('/data-section-10/{id}', [GetDataController::class, 'section_10'])->name('data.section-10');
-    Route::get('/kritik-saran-section-10/{id}', [GetDataController::class, 'kritik_saran_section_10'])->name('data.kritik-saran-section-10');
-    Route::get('/data-section-11/{id}', [GetDataController::class, 'section_11'])->name('data.section-11');
-    Route::get('/kritik-saran-section-11/{id}', [GetDataController::class, 'kritik_saran_section_11'])->name('data.kritik-saran-section-11');
-    Route::get('/data-section-12/{id}', [GetDataController::class, 'section_12'])->name('data.section-12');
-    Route::get('/kritik-saran-section-12/{id}', [GetDataController::class, 'kritik_saran_section_12'])->name('data.kritik-saran-section-12');
-    Route::get('/data-section-13/{id}', [GetDataController::class, 'section_13'])->name('data.section-13');
-    Route::get('/kritik-saran-section-13/{id}', [GetDataController::class, 'kritik_saran_section_13'])->name('data.kritik-saran-section-13');
 
     Route::get('/profile-settings', function () {
         return view('profile');

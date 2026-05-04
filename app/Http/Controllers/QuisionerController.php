@@ -236,6 +236,7 @@ class QuisionerController extends Controller
     public function submit_section_5(Request $request, $id, $token)
     {
         $auditee = Auditee::where('token', $token)->first();
+        $kritikSaran = $request->kritik_saran ?? '';
 
         if (!$auditee->evaluasi_manajemen_risiko) {
             $auditee->evaluasi_manajemen_risiko()->create([
@@ -246,7 +247,10 @@ class QuisionerController extends Controller
                 'pertanyaan_5' => $request->pertanyaan_5,
                 'pertanyaan_6' => $request->pertanyaan_6,
                 'pertanyaan_7' => $request->pertanyaan_7,
-                'kritik_saran' => $request->kritik_saran,
+                'pertanyaan_8' => $request->pertanyaan_8,
+                'pertanyaan_9' => $request->pertanyaan_9,
+                'pertanyaan_10' => $request->pertanyaan_10,
+                'kritik_saran' => $kritikSaran,
                 'form_id' => $id,
             ]);
         } else {
@@ -258,17 +262,21 @@ class QuisionerController extends Controller
                 'pertanyaan_5' => $request->pertanyaan_5,
                 'pertanyaan_6' => $request->pertanyaan_6,
                 'pertanyaan_7' => $request->pertanyaan_7,
-                'kritik_saran' => $request->kritik_saran,
+                'pertanyaan_8' => $request->pertanyaan_8,
+                'pertanyaan_9' => $request->pertanyaan_9,
+                'pertanyaan_10' => $request->pertanyaan_10,
+                'kritik_saran' => $kritikSaran,
                 'form_id' => $id,
             ]);
         }
 
-        return redirect()->back()->with('success', 'Respon anda di section 5 berhasil disimpan!')->with('scrollTo', 'section-5');
+        return redirect()->back()->with('success', 'Respon anda di ISMS (Establish & Maintain) berhasil disimpan!')->with('scrollTo', 'section-5');
     }
 
     public function submit_section_6(Request $request, $id, $token)
     {
         $auditee = Auditee::where('token', $token)->first();
+        $kritikSaran = $request->kritik_saran ?? '';
 
         if (!$auditee->arahan_manajemen_risiko) {
             $auditee->arahan_manajemen_risiko()->create([
@@ -277,7 +285,19 @@ class QuisionerController extends Controller
                 'pertanyaan_3' => $request->pertanyaan_3,
                 'pertanyaan_4' => $request->pertanyaan_4,
                 'pertanyaan_5' => $request->pertanyaan_5,
-                'kritik_saran' => $request->kritik_saran,
+                'pertanyaan_6' => $request->pertanyaan_6,
+                'pertanyaan_7' => $request->pertanyaan_7,
+                'pertanyaan_8' => $request->pertanyaan_8,
+                'pertanyaan_9' => $request->pertanyaan_9,
+                'pertanyaan_10' => $request->pertanyaan_10,
+                'pertanyaan_11' => $request->pertanyaan_11,
+                'pertanyaan_12' => $request->pertanyaan_12,
+                'pertanyaan_13' => $request->pertanyaan_13,
+                'pertanyaan_14' => $request->pertanyaan_14,
+                'pertanyaan_15' => $request->pertanyaan_15,
+                'pertanyaan_16' => $request->pertanyaan_16,
+                'pertanyaan_17' => $request->pertanyaan_17,
+                'kritik_saran' => $kritikSaran,
                 'form_id' => $id,
             ]);
         } else {
@@ -287,17 +307,30 @@ class QuisionerController extends Controller
                 'pertanyaan_3' => $request->pertanyaan_3,
                 'pertanyaan_4' => $request->pertanyaan_4,
                 'pertanyaan_5' => $request->pertanyaan_5,
-                'kritik_saran' => $request->kritik_saran,
+                'pertanyaan_6' => $request->pertanyaan_6,
+                'pertanyaan_7' => $request->pertanyaan_7,
+                'pertanyaan_8' => $request->pertanyaan_8,
+                'pertanyaan_9' => $request->pertanyaan_9,
+                'pertanyaan_10' => $request->pertanyaan_10,
+                'pertanyaan_11' => $request->pertanyaan_11,
+                'pertanyaan_12' => $request->pertanyaan_12,
+                'pertanyaan_13' => $request->pertanyaan_13,
+                'pertanyaan_14' => $request->pertanyaan_14,
+                'pertanyaan_15' => $request->pertanyaan_15,
+                'pertanyaan_16' => $request->pertanyaan_16,
+                'pertanyaan_17' => $request->pertanyaan_17,
+                'kritik_saran' => $kritikSaran,
                 'form_id' => $id,
             ]);
         }
 
-        return redirect()->back()->with('success', 'Respon anda di section 6 berhasil disimpan!')->with('scrollTo', 'section-6');
+        return redirect()->back()->with('success', 'Respon anda di Risk Treatment Plan berhasil disimpan!')->with('scrollTo', 'section-6');
     }
 
     public function submit_section_7(Request $request, $id, $token)
     {
         $auditee = Auditee::where('token', $token)->first();
+        $kritikSaran = $request->kritik_saran ?? '';
 
         if (!$auditee->pemantauan_manajemen_risiko) {
             $auditee->pemantauan_manajemen_risiko()->create([
@@ -305,7 +338,13 @@ class QuisionerController extends Controller
                 'pertanyaan_2' => $request->pertanyaan_2,
                 'pertanyaan_3' => $request->pertanyaan_3,
                 'pertanyaan_4' => $request->pertanyaan_4,
-                'kritik_saran' => $request->kritik_saran,
+                'pertanyaan_5' => $request->pertanyaan_5,
+                'pertanyaan_6' => $request->pertanyaan_6,
+                'pertanyaan_7' => $request->pertanyaan_7,
+                'pertanyaan_8' => $request->pertanyaan_8,
+                'pertanyaan_9' => $request->pertanyaan_9,
+                'pertanyaan_10' => $request->pertanyaan_10,
+                'kritik_saran' => $kritikSaran,
                 'form_id' => $id,
             ]);
         } else {
@@ -314,197 +353,17 @@ class QuisionerController extends Controller
                 'pertanyaan_2' => $request->pertanyaan_2,
                 'pertanyaan_3' => $request->pertanyaan_3,
                 'pertanyaan_4' => $request->pertanyaan_4,
-                'kritik_saran' => $request->kritik_saran,
-                'form_id' => $id,
-            ]);
-        }
-
-        return redirect()->back()->with('success', 'Respon anda di section 7 berhasil disimpan!')->with('scrollTo', 'section-7');
-    }
-
-    public function submit_section_8(Request $request, $id, $token)
-    {
-        $auditee = Auditee::where('token', $token)->first();
-
-        if (!$auditee->pengumpulan_manajemen_risiko) {
-            $auditee->pengumpulan_manajemen_risiko()->create([
-                'pertanyaan_1' => $request->pertanyaan_1,
-                'pertanyaan_2' => $request->pertanyaan_2,
-                'pertanyaan_3' => $request->pertanyaan_3,
-                'pertanyaan_4' => $request->pertanyaan_4,
                 'pertanyaan_5' => $request->pertanyaan_5,
                 'pertanyaan_6' => $request->pertanyaan_6,
                 'pertanyaan_7' => $request->pertanyaan_7,
                 'pertanyaan_8' => $request->pertanyaan_8,
-                'kritik_saran' => $request->kritik_saran,
-                'form_id' => $id,
-            ]);
-        } else {
-            $auditee->pengumpulan_manajemen_risiko()->update([
-                'pertanyaan_1' => $request->pertanyaan_1,
-                'pertanyaan_2' => $request->pertanyaan_2,
-                'pertanyaan_3' => $request->pertanyaan_3,
-                'pertanyaan_4' => $request->pertanyaan_4,
-                'pertanyaan_5' => $request->pertanyaan_5,
-                'pertanyaan_6' => $request->pertanyaan_6,
-                'pertanyaan_7' => $request->pertanyaan_7,
-                'pertanyaan_8' => $request->pertanyaan_8,
-                'kritik_saran' => $request->kritik_saran,
+                'pertanyaan_9' => $request->pertanyaan_9,
+                'pertanyaan_10' => $request->pertanyaan_10,
+                'kritik_saran' => $kritikSaran,
                 'form_id' => $id,
             ]);
         }
 
-        return redirect()->back()->with('success', 'Respon anda di section 8 berhasil disimpan!')->with('scrollTo', 'section-8');
-    }
-
-    public function submit_section_9(Request $request, $id, $token)
-    {
-        $auditee = Auditee::where('token', $token)->first();
-
-        if (!$auditee->menganalisis_risiko) {
-            $auditee->menganalisis_risiko()->create([
-                'pertanyaan_1' => $request->pertanyaan_1,
-                'pertanyaan_2' => $request->pertanyaan_2,
-                'pertanyaan_3' => $request->pertanyaan_3,
-                'pertanyaan_4' => $request->pertanyaan_4,
-                'pertanyaan_5' => $request->pertanyaan_5,
-                'pertanyaan_6' => $request->pertanyaan_6,
-                'pertanyaan_7' => $request->pertanyaan_7,
-                'pertanyaan_8' => $request->pertanyaan_8,
-                'kritik_saran' => $request->kritik_saran,
-                'form_id' => $id,
-            ]);
-        } else {
-            $auditee->menganalisis_risiko()->update([
-                'pertanyaan_1' => $request->pertanyaan_1,
-                'pertanyaan_2' => $request->pertanyaan_2,
-                'pertanyaan_3' => $request->pertanyaan_3,
-                'pertanyaan_4' => $request->pertanyaan_4,
-                'pertanyaan_5' => $request->pertanyaan_5,
-                'pertanyaan_6' => $request->pertanyaan_6,
-                'pertanyaan_7' => $request->pertanyaan_7,
-                'pertanyaan_8' => $request->pertanyaan_8,
-                'kritik_saran' => $request->kritik_saran,
-                'form_id' => $id,
-            ]);
-        }
-
-        return redirect()->back()->with('success', 'Respon anda di section 9 berhasil disimpan!')->with('scrollTo', 'section-9');
-    }
-
-    public function submit_section_10(Request $request, $id, $token)
-    {
-        $auditee = Auditee::where('token', $token)->first();
-
-        if (!$auditee->memelihara_profil_risiko) {
-            $auditee->memelihara_profil_risiko()->create([
-                'pertanyaan_1' => $request->pertanyaan_1,
-                'pertanyaan_2' => $request->pertanyaan_2,
-                'pertanyaan_3' => $request->pertanyaan_3,
-                'pertanyaan_4' => $request->pertanyaan_4,
-                'pertanyaan_5' => $request->pertanyaan_5,
-                'pertanyaan_6' => $request->pertanyaan_6,
-                'pertanyaan_7' => $request->pertanyaan_7,
-                'kritik_saran' => $request->kritik_saran,
-                'form_id' => $id,
-            ]);
-        } else {
-            $auditee->memelihara_profil_risiko()->update([
-                'pertanyaan_1' => $request->pertanyaan_1,
-                'pertanyaan_2' => $request->pertanyaan_2,
-                'pertanyaan_3' => $request->pertanyaan_3,
-                'pertanyaan_4' => $request->pertanyaan_4,
-                'pertanyaan_5' => $request->pertanyaan_5,
-                'pertanyaan_6' => $request->pertanyaan_6,
-                'pertanyaan_7' => $request->pertanyaan_7,
-                'kritik_saran' => $request->kritik_saran,
-                'form_id' => $id,
-            ]);
-        }
-
-        return redirect()->back()->with('success', 'Respon anda di section 10 berhasil disimpan!')->with('scrollTo', 'section-10');
-    }
-
-    public function submit_section_11(Request $request, $id, $token)
-    {
-        $auditee = Auditee::where('token', $token)->first();
-
-        if (!$auditee->mengartikulasikan_risiko) {
-            $auditee->mengartikulasikan_risiko()->create([
-                'pertanyaan_1' => $request->pertanyaan_1,
-                'pertanyaan_2' => $request->pertanyaan_2,
-                'pertanyaan_3' => $request->pertanyaan_3,
-                'pertanyaan_4' => $request->pertanyaan_4,
-                'pertanyaan_5' => $request->pertanyaan_5,
-                'kritik_saran' => $request->kritik_saran,
-                'form_id' => $id,
-            ]);
-        } else {
-            $auditee->mengartikulasikan_risiko()->update([
-                'pertanyaan_1' => $request->pertanyaan_1,
-                'pertanyaan_2' => $request->pertanyaan_2,
-                'pertanyaan_3' => $request->pertanyaan_3,
-                'pertanyaan_4' => $request->pertanyaan_4,
-                'pertanyaan_5' => $request->pertanyaan_5,
-                'kritik_saran' => $request->kritik_saran,
-                'form_id' => $id,
-            ]);
-        }
-
-        return redirect()->back()->with('success', 'Respon anda di section 11 berhasil disimpan!')->with('scrollTo', 'section-11');
-    }
-
-    public function submit_section_12(Request $request, $id, $token)
-    {
-        $auditee = Auditee::where('token', $token)->first();
-
-        if (!$auditee->menentukan_portofolio_mitigasi_risiko) {
-            $auditee->menentukan_portofolio_mitigasi_risiko()->create([
-                'pertanyaan_1' => $request->pertanyaan_1,
-                'pertanyaan_2' => $request->pertanyaan_2,
-                'pertanyaan_3' => $request->pertanyaan_3,
-                'kritik_saran' => $request->kritik_saran,
-                'form_id' => $id,
-            ]);
-        } else {
-            $auditee->menentukan_portofolio_mitigasi_risiko()->update([
-                'pertanyaan_1' => $request->pertanyaan_1,
-                'pertanyaan_2' => $request->pertanyaan_2,
-                'pertanyaan_3' => $request->pertanyaan_3,
-                'kritik_saran' => $request->kritik_saran,
-                'form_id' => $id,
-            ]);
-        }
-
-        return redirect()->back()->with('success', 'Respon anda di section 12 berhasil disimpan!')->with('scrollTo', 'section-12');
-    }
-
-    public function submit_section_13(Request $request, $id, $token)
-    {
-        $auditee = Auditee::where('token', $token)->first();
-
-        if (!$auditee->menanggapi_risiko) {
-            $auditee->menanggapi_risiko()->create([
-                'pertanyaan_1' => $request->pertanyaan_1,
-                'pertanyaan_2' => $request->pertanyaan_2,
-                'pertanyaan_3' => $request->pertanyaan_3,
-                'pertanyaan_4' => $request->pertanyaan_4,
-                'pertanyaan_5' => $request->pertanyaan_5,
-                'kritik_saran' => $request->kritik_saran,
-                'form_id' => $id,
-            ]);
-        } else {
-            $auditee->menanggapi_risiko()->update([
-                'pertanyaan_1' => $request->pertanyaan_1,
-                'pertanyaan_2' => $request->pertanyaan_2,
-                'pertanyaan_3' => $request->pertanyaan_3,
-                'pertanyaan_4' => $request->pertanyaan_4,
-                'pertanyaan_5' => $request->pertanyaan_5,
-                'kritik_saran' => $request->kritik_saran,
-                'form_id' => $id,
-            ]);
-        }
-
-        return redirect()->back()->with('success', 'Respon anda di section 12 berhasil disimpan!')->with('scrollTo', 'section-13');
+        return redirect()->back()->with('success', 'Respon anda di Monitoring & Review ISMS berhasil disimpan!')->with('scrollTo', 'section-7');
     }
 }

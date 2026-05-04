@@ -3,27 +3,33 @@
     @csrf
     <div class="card shadow mb-4" id="section-6">
         <div class="card-header">
-            <strong class="card-title">Section 6 (Identifikasi optimasi risiko teknologi informasi Bagian Kedua: Arahan
-                Manajemen
-                Risiko)</strong>
+            <strong class="card-title">Section 6 (Risk Treatment Plan)</strong>
         </div>
         <div class="card-body">
+            @php
+                $questions = [
+                    'Apakah organisasi memiliki rencana penanganan risiko keamanan informasi yang terdokumentasi?',
+                    'Apakah rencana tersebut selaras dengan tujuan strategis organisasi?',
+                    'Apakah rencana tersebut selaras dengan arsitektur perusahaan?',
+                    'Apakah rencana tersebut mencakup praktik manajemen dan solusi keamanan yang tepat?',
+                    'Apakah rencana tersebut menetapkan sumber daya, tanggung jawab, dan prioritas dalam pengelolaan risiko?',
+                    'Apakah organisasi memiliki inventaris komponen solusi yang digunakan untuk mengelola risiko keamanan?',
+                    'Apakah proposal implementasi keamanan didukung oleh business case yang telah disetujui?',
+                    'Apakah proposal tersebut mencakup perencanaan pendanaan dan pembagian tanggung jawab?',
+                    'Apakah organisasi memberikan masukan dalam desain dan pengembangan solusi keamanan?',
+                    'Apakah organisasi menyelenggarakan pelatihan keamanan informasi dan privasi secara berkala?',
+                    'Apakah organisasi melakukan program peningkatan kesadaran (awareness) keamanan informasi?',
+                    'Apakah prosedur keamanan telah diintegrasikan dalam perencanaan, desain, implementasi, dan monitoring sistem?',
+                    'Apakah organisasi memiliki mekanisme untuk pencegahan insiden keamanan?',
+                    'Apakah organisasi memiliki mekanisme untuk deteksi kejadian keamanan?',
+                    'Apakah organisasi memiliki mekanisme untuk respons terhadap insiden keamanan?',
+                    'Apakah organisasi telah menetapkan cara untuk mengukur efektivitas pengelolaan keamanan?',
+                    'Apakah hasil pengukuran digunakan untuk mengevaluasi dan meningkatkan efektivitas keamanan?',
+                ];
+            @endphp
             <p class="mt-3">
-                Bagian kedua dari Optimasi Risiko Teknologi Informasi (TI) ini bertujuan untuk mengidentifikasi
-                bagaimana
-                organisasi
-                mengarahkan dan mengintegrasikan pengelolaan risiko TI ke dalam praktik operasional. Kuisioner ini
-                berfokus
-                pada
-                penilaian pendekatan strategis, termasuk komunikasi risiko, eskalasi, dan implementasi mekanisme
-                pengelolaan
-                risiko.
-
-                <br>
                 Untuk setiap pernyataan yang diberikan, harap pilih <strong>Ya</strong> atau <strong>Tidak</strong>
-                sesuai
-                dengan kondisi yang berlaku di organisasi
-                Anda.
+                sesuai dengan kondisi yang berlaku di organisasi Anda.
             </p>
 
             <div class="table-responsive mt-4">
@@ -35,94 +41,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Mengarahkan penerjemahan dan integrasi strategi risiko TI ke
-                                dalam praktik manajemen risiko dan kegiatan operasional.</td>
-                            <td>
-                                <select class="custom-select text-center" id="custom-select" name="pertanyaan_1"
-                                    required {{ $status == 'view' ? 'disabled' : '' }}>
-                                    <option value="">- Pilih -</option>
-                                    <option value="Ya"
-                                        {{ $auditee->arahan_manajemen_risiko != null && $auditee->arahan_manajemen_risiko->pertanyaan_1 == 'Ya' ? 'selected' : '' }}>
-                                        Ya</option>
-                                    <option value="Tidak"
-                                        {{ $auditee->arahan_manajemen_risiko != null && $auditee->arahan_manajemen_risiko->pertanyaan_1 == 'Tidak' ? 'selected' : '' }}>
-                                        Tidak</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Mengarahkan pengembangan rencana komunikasi risiko yang
-                                mencakup seluruh level organisasi.</td>
-                            <td>
-                                <select class="custom-select text-center" id="custom-select" name="pertanyaan_2"
-                                    required {{ $status == 'view' ? 'disabled' : '' }}>
-                                    <option value="">- Pilih -</option>
-                                    <option value="Ya"
-                                        {{ $auditee->arahan_manajemen_risiko != null && $auditee->arahan_manajemen_risiko->pertanyaan_2 == 'Ya' ? 'selected' : '' }}>
-                                        Ya</option>
-                                    <option value="Tidak"
-                                        {{ $auditee->arahan_manajemen_risiko != null && $auditee->arahan_manajemen_risiko->pertanyaan_2 == 'Tidak' ? 'selected' : '' }}>
-                                        Tidak</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Mengarahkan implementasi mekanisme yang tepat untuk
-                                merespons perubahan risiko dengan cepat dan melaporkannya
-                                secara langsung ke tingkat manajemen yang sesuai, didukung oleh
-                                prinsip-prinsip eskalasi yang telah disepakati (apa yang harus
-                                dilaporkan, kapan, di mana, dan bagaimana).</td>
-                            <td>
-                                <select class="custom-select text-center" id="custom-select" name="pertanyaan_3"
-                                    required {{ $status == 'view' ? 'disabled' : '' }}>
-                                    <option value="">- Pilih -</option>
-                                    <option value="Ya"
-                                        {{ $auditee->arahan_manajemen_risiko != null && $auditee->arahan_manajemen_risiko->pertanyaan_3 == 'Ya' ? 'selected' : '' }}>
-                                        Ya</option>
-                                    <option value="Tidak"
-                                        {{ $auditee->arahan_manajemen_risiko != null && $auditee->arahan_manajemen_risiko->pertanyaan_3 == 'Tidak' ? 'selected' : '' }}>
-                                        Tidak</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Mengarahkan agar risiko, peluang, masalah, dan kekhawatiran
-                                dapat diidentifikasi dan dilaporkan oleh siapa saja kepada pihak
-                                yang sesuai kapan saja. Risiko harus dikelola sesuai dengan
-                                kebijakan dan prosedur yang telah dipublikasikan, serta
-                                diekskalasi kepada pengambil keputusan yang relevan.</td>
-                            <td>
-                                <select class="custom-select text-center" id="custom-select" name="pertanyaan_4"
-                                    required {{ $status == 'view' ? 'disabled' : '' }}>
-                                    <option value="">- Pilih -</option>
-                                    <option value="Ya"
-                                        {{ $auditee->arahan_manajemen_risiko != null && $auditee->arahan_manajemen_risiko->pertanyaan_4 == 'Ya' ? 'selected' : '' }}>
-                                        Ya</option>
-                                    <option value="Tidak"
-                                        {{ $auditee->arahan_manajemen_risiko != null && $auditee->arahan_manajemen_risiko->pertanyaan_4 == 'Tidak' ? 'selected' : '' }}>
-                                        Tidak</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Mengidentifikasi tujuan utama dan metrik dari proses tata kelola
-                                dan manajemen risiko yang perlu dipantau, serta menyetujui
-                                pendekatan, metode, teknik, dan proses untuk mengumpulkan dan
-                                melaporkan informasi pengukuran.</td>
-                            <td>
-                                <select class="custom-select text-center" id="custom-select" name="pertanyaan_5"
-                                    required {{ $status == 'view' ? 'disabled' : '' }}>
-                                    <option value="">- Pilih -</option>
-                                    <option value="Ya"
-                                        {{ $auditee->arahan_manajemen_risiko != null && $auditee->arahan_manajemen_risiko->pertanyaan_5 == 'Ya' ? 'selected' : '' }}>
-                                        Ya</option>
-                                    <option value="Tidak"
-                                        {{ $auditee->arahan_manajemen_risiko != null && $auditee->arahan_manajemen_risiko->pertanyaan_5 == 'Tidak' ? 'selected' : '' }}>
-                                        Tidak</option>
-                                </select>
-                            </td>
-                        </tr>
+                        @foreach ($questions as $i => $question)
+                            @php
+                                $no = $i + 1;
+                                $value = data_get($auditee->arahan_manajemen_risiko, 'pertanyaan_' . $no);
+                            @endphp
+                            <tr>
+                                <td>{{ $question }}</td>
+                                <td>
+                                    <select class="custom-select text-center" id="custom-select"
+                                        name="pertanyaan_{{ $no }}" required {{ $status == 'view' ? 'disabled' : '' }}>
+                                        <option value="">- Pilih -</option>
+                                        <option value="Ya" {{ $value === 'Ya' ? 'selected' : '' }}>Ya</option>
+                                        <option value="Tidak" {{ $value === 'Tidak' ? 'selected' : '' }}>Tidak</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
                 <div class="form-group mt-4">

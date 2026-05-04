@@ -1,14 +1,24 @@
-<h3 class="mt-3 text-center">Section 5 (Identifikasi optimasi risiko teknologi informasi Bagian Pertama: Evaluasi
-    Manajemen Risiko)</h3>
+@php
+    $questions = [
+        'Apakah organisasi telah menetapkan ruang lingkup dan batasan ISMS yang mencakup organisasi, lokasi, aset, dan teknologi?',
+        'Apakah terdapat dokumentasi yang menjelaskan pengecualian ruang lingkup ISMS beserta alasannya?',
+        'Apakah ISMS telah ditetapkan sesuai dengan kebijakan dan konteks operasional organisasi?',
+        'Apakah ISMS telah diselaraskan dengan pendekatan pengelolaan keamanan secara keseluruhan di organisasi?',
+        'Apakah terdapat persetujuan manajemen dalam implementasi, operasional, atau perubahan ISMS?',
+        'Apakah organisasi memiliki dokumen statement of applicability yang menggambarkan ruang lingkup ISMS?',
+        'Apakah dokumen statement of applicability tersebut diperbarui secara berkala?',
+        'Apakah peran dan tanggung jawab dalam manajemen keamanan informasi telah ditentukan dengan jelas?',
+        'Apakah peran dan tanggung jawab tersebut telah dikomunikasikan kepada pihak terkait?',
+        'Apakah pendekatan ISMS telah dikomunikasikan kepada seluruh pemangku kepentingan?',
+    ];
+@endphp
+
+<h3 class="mt-3 text-center">ISMS (Establish &amp; Maintain)</h3>
 
 <!-- Deskripsi -->
 <p class="mt-3">
-    Bagian pertama dari Optimasi Risiko Teknologi Informasi (TI) ini bertujuan untuk mengevaluasi cara organisasi
-    memahami, menilai, dan menentukan strategi pengelolaan risiko TI. Fokusnya adalah pada analisis awal dan
-    identifikasi risiko TI yang relevan dengan tujuan strategis organisasi.
-    <br>
-    Pengisian pada kolom aktivitas dilakukan harap pilih <strong>Ya (Aktivitas dilakukan)</strong> atau
-    <strong>Tidak (Aktivitas tidak dilakukan)</strong> sesuai kondisi yang berlaku di organisasi
+    Untuk setiap pernyataan yang diberikan, harap pilih <strong>Ya</strong> atau <strong>Tidak</strong> sesuai dengan
+    kondisi yang berlaku di organisasi Anda.
 </p>
 
 <div class="text-end mb-3">
@@ -25,105 +35,23 @@
             </tr>
         </thead>
         <tbody>
-            <tr>
-                <td>Memahami organisasi dan konteksnya yang berkaitan dengan
-                    risiko Teknologi Informasi (TI).</td>
-                <td>
-                    <div style="width: 120px; height: 120px; margin: auto;">
-                        <canvas id="section_5_1"></canvas>
-                    </div>
-                    <div class="mt-2 text-center">
-                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
-                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Menentukan tingkat appetite risiko organisasi, yaitu tingkat risiko
-                    TI yang bersedia diterima organisasi dalam mencapai tujuan
-                    strategisnya.</td>
-                <td>
-                    <div style="width: 120px; height: 120px; margin: auto;">
-                        <canvas id="section_5_2"></canvas>
-                    </div>
-                    <div class="mt-2 text-center">
-                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
-                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Menentukan tingkat toleransi risiko terhadap appetite risiko, yaitu
-                    penyimpangan sementara yang masih dapat diterima dari batas
-                    risiko yang telah ditentukan.</td>
-                <td>
-                    <div style="width: 120px; height: 120px; margin: auto;">
-                        <canvas id="section_5_3"></canvas>
-                    </div>
-                    <div class="mt-2 text-center">
-                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
-                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Menentukan sejauh mana strategi risiko TI selaras dengan strategi
-                    risiko organisasi secara keseluruhan, serta memastikan bahwa
-                    appetite risiko berada di bawah kapasitas risiko organisasi.</td>
-                <td>
-                    <div style="width: 120px; height: 120px; margin: auto;">
-                        <canvas id="section_5_4"></canvas>
-                    </div>
-                    <div class="mt-2 text-center">
-                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
-                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Secara proaktif mengevaluasi faktor risiko TI sebelum keputusan
-                    strategis dibuat, serta memastikan bahwa pertimbangan risiko
-                    menjadi bagian dari proses pengambilan keputusan strategis.</td>
-                <td>
-                    <div style="width: 120px; height: 120px; margin: auto;">
-                        <canvas id="section_5_5"></canvas>
-                    </div>
-                    <div class="mt-2 text-center">
-                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
-                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Mengevaluasi aktivitas manajemen risiko untuk memastikan
-                    kesesuaian dengan kapasitas organisasi dalam menangani
-                    kerugian TI dan toleransi risiko dari pihak manajemen.</td>
-                <td>
-                    <div style="width: 120px; height: 120px; margin: auto;">
-                        <canvas id="section_5_6"></canvas>
-                    </div>
-                    <div class="mt-2 text-center">
-                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
-                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
-                    </div>
-                </td>
-            </tr>
-            <tr>
-                <td>Merekrut dan mempertahankan keterampilan serta personel yang
-                    diperlukan untuk manajemen risiko TI.</td>
-                <td>
-                    <div style="width: 120px; height: 120px; margin: auto;">
-                        <canvas id="section_5_7"></canvas>
-                    </div>
-                    <div class="mt-2 text-center">
-                        <span class="badge" style="background-color: #36A2EB;">Ya</span>
-                        <span class="badge" style="background-color: #FF6384;">Tidak</span>
-                    </div>
-                </td>
-            </tr>
+            @foreach ($questions as $i => $question)
+                <tr>
+                    <td>{{ $question }}</td>
+                    <td>
+                        <div style="width: 120px; height: 120px; margin: auto;">
+                            <canvas id="section_5_{{ $i + 1 }}"></canvas>
+                        </div>
+                        <div class="mt-2 text-center">
+                            <span class="badge" style="background-color: #36A2EB;">Ya</span>
+                            <span class="badge" style="background-color: #FF6384;">Tidak</span>
+                        </div>
+                    </td>
+                </tr>
+            @endforeach
         </tbody>
     </table>
-    <h4 class="mt-4 text-center">Kritik dan Saran Section 5</h4>
+    <h4 class="mt-4 text-center">Kritik dan Saran ISMS (Establish &amp; Maintain)</h4>
     <div id="kritikSaranCarousel-section-5" class="carousel slide" data-ride="carousel">
         <div class="carousel-inner" id="kritikSaranContent-section-5">
             <div class="carousel-item active">
@@ -144,7 +72,7 @@
 @push('scripts')
     <script>
         // Chart instances
-        let section_5_1, section_5_2, section_5_3, section_5_4, section_5_5, section_5_6, section_5_7;
+        let section_5_charts = [];
 
         // Fungsi untuk inisialisasi chart
         function createChart(canvasId, data) {
@@ -171,47 +99,15 @@
                 const data = await response.json();
 
                 if (data) {
-                    section_5_1.data.datasets[0].data = [
-                        data.pertanyaan_1_jawaban_ya,
-                        data.pertanyaan_1_jawaban_tidak,
-                    ];
-                    section_5_1.update();
-
-                    section_5_2.data.datasets[0].data = [
-                        data.pertanyaan_2_jawaban_ya,
-                        data.pertanyaan_2_jawaban_tidak,
-                    ];
-                    section_5_2.update();
-
-                    section_5_3.data.datasets[0].data = [
-                        data.pertanyaan_3_jawaban_ya,
-                        data.pertanyaan_3_jawaban_tidak,
-                    ];
-                    section_5_3.update();
-
-                    section_5_4.data.datasets[0].data = [
-                        data.pertanyaan_4_jawaban_ya,
-                        data.pertanyaan_4_jawaban_tidak,
-                    ];
-                    section_5_4.update();
-
-                    section_5_5.data.datasets[0].data = [
-                        data.pertanyaan_5_jawaban_ya,
-                        data.pertanyaan_5_jawaban_tidak,
-                    ];
-                    section_5_5.update();
-
-                    section_5_6.data.datasets[0].data = [
-                        data.pertanyaan_6_jawaban_ya,
-                        data.pertanyaan_6_jawaban_tidak,
-                    ];
-                    section_5_6.update();
-
-                    section_5_7.data.datasets[0].data = [
-                        data.pertanyaan_7_jawaban_ya,
-                        data.pertanyaan_7_jawaban_tidak,
-                    ];
-                    section_5_7.update();
+                    for (let i = 1; i <= {{ count($questions) }}; i++) {
+                        const chart = section_5_charts[i - 1];
+                        if (!chart) continue;
+                        chart.data.datasets[0].data = [
+                            data[`pertanyaan_${i}_jawaban_ya`],
+                            data[`pertanyaan_${i}_jawaban_tidak`],
+                        ];
+                        chart.update();
+                    }
 
 
                     // Update last updated timestamp if needed
@@ -237,33 +133,11 @@
         // Initialize charts
         document.addEventListener('DOMContentLoaded', function() {
             // Create charts
-            section_5_1 = createChart("section_5_1", {
-                ...dataTemplate2
-            });
-
-            section_5_2 = createChart("section_5_2", {
-                ...dataTemplate2
-            });
-
-            section_5_3 = createChart("section_5_3", {
-                ...dataTemplate2
-            });
-
-            section_5_4 = createChart("section_5_4", {
-                ...dataTemplate2
-            });
-
-            section_5_5 = createChart("section_5_5", {
-                ...dataTemplate2
-            });
-
-            section_5_6 = createChart("section_5_6", {
-                ...dataTemplate2
-            });
-
-            section_5_7 = createChart("section_5_7", {
-                ...dataTemplate2
-            });
+            for (let i = 1; i <= {{ count($questions) }}; i++) {
+                section_5_charts.push(createChart(`section_5_${i}`, {
+                    ...dataTemplate2
+                }));
+            }
 
             // Fetch initial data (replace 1 with your actual form_id)
             fetchData_section_5('{{ $form->id }}');

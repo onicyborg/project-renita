@@ -77,24 +77,6 @@
                     {{-- section-7 --}}
                     @include('quisioner.section-quisioner.section-7')
 
-                    {{-- section-8 --}}
-                    @include('quisioner.section-quisioner.section-8')
-
-                    {{-- section-9 --}}
-                    @include('quisioner.section-quisioner.section-9')
-
-                    {{-- section-10 --}}
-                    @include('quisioner.section-quisioner.section-10')
-
-                    {{-- section-11 --}}
-                    @include('quisioner.section-quisioner.section-11')
-
-                    {{-- section-12 --}}
-                    @include('quisioner.section-quisioner.section-12')
-
-                    {{-- section-13 --}}
-                    @include('quisioner.section-quisioner.section-13')
-
                 </div> <!-- /. col -->
             </div> <!-- .row -->
         </div> <!-- .container-fluid -->

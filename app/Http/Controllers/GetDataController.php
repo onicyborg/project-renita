@@ -2,7 +2,6 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
 class GetDataController extends Controller
@@ -949,6 +948,12 @@ class GetDataController extends Controller
                 DB::raw('SUM(CASE WHEN pertanyaan_6 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_6_jawaban_tidak'),
                 DB::raw('SUM(CASE WHEN pertanyaan_7 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_7_jawaban_ya'),
                 DB::raw('SUM(CASE WHEN pertanyaan_7 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_7_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_8 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_8_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_8 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_8_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_9 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_9_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_9 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_9_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_10 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_10_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_10 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_10_jawaban_tidak'),
                 DB::raw('MAX(updated_at) as last_updated_at'),
             )
             ->where('form_id', $id)
@@ -974,6 +979,12 @@ class GetDataController extends Controller
                 'pertanyaan_6_jawaban_tidak' => 0,
                 'pertanyaan_7_jawaban_ya' => 0,
                 'pertanyaan_7_jawaban_tidak' => 0,
+                'pertanyaan_8_jawaban_ya' => 0,
+                'pertanyaan_8_jawaban_tidak' => 0,
+                'pertanyaan_9_jawaban_ya' => 0,
+                'pertanyaan_9_jawaban_tidak' => 0,
+                'pertanyaan_10_jawaban_ya' => 0,
+                'pertanyaan_10_jawaban_tidak' => 0,
                 'last_updated_at' => null
             ];
         }
@@ -1016,6 +1027,30 @@ class GetDataController extends Controller
                 DB::raw('SUM(CASE WHEN pertanyaan_4 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_4_jawaban_tidak'),
                 DB::raw('SUM(CASE WHEN pertanyaan_5 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_5_jawaban_ya'),
                 DB::raw('SUM(CASE WHEN pertanyaan_5 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_5_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_6 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_6_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_6 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_6_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_7 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_7_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_7 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_7_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_8 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_8_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_8 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_8_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_9 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_9_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_9 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_9_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_10 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_10_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_10 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_10_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_11 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_11_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_11 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_11_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_12 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_12_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_12 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_12_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_13 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_13_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_13 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_13_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_14 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_14_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_14 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_14_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_15 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_15_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_15 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_15_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_16 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_16_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_16 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_16_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_17 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_17_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_17 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_17_jawaban_tidak'),
                 DB::raw('MAX(updated_at) as last_updated_at'),
             )
             ->where('form_id', $id)
@@ -1037,6 +1072,30 @@ class GetDataController extends Controller
                 'pertanyaan_4_jawaban_tidak' => 0,
                 'pertanyaan_5_jawaban_ya' => 0,
                 'pertanyaan_5_jawaban_tidak' => 0,
+                'pertanyaan_6_jawaban_ya' => 0,
+                'pertanyaan_6_jawaban_tidak' => 0,
+                'pertanyaan_7_jawaban_ya' => 0,
+                'pertanyaan_7_jawaban_tidak' => 0,
+                'pertanyaan_8_jawaban_ya' => 0,
+                'pertanyaan_8_jawaban_tidak' => 0,
+                'pertanyaan_9_jawaban_ya' => 0,
+                'pertanyaan_9_jawaban_tidak' => 0,
+                'pertanyaan_10_jawaban_ya' => 0,
+                'pertanyaan_10_jawaban_tidak' => 0,
+                'pertanyaan_11_jawaban_ya' => 0,
+                'pertanyaan_11_jawaban_tidak' => 0,
+                'pertanyaan_12_jawaban_ya' => 0,
+                'pertanyaan_12_jawaban_tidak' => 0,
+                'pertanyaan_13_jawaban_ya' => 0,
+                'pertanyaan_13_jawaban_tidak' => 0,
+                'pertanyaan_14_jawaban_ya' => 0,
+                'pertanyaan_14_jawaban_tidak' => 0,
+                'pertanyaan_15_jawaban_ya' => 0,
+                'pertanyaan_15_jawaban_tidak' => 0,
+                'pertanyaan_16_jawaban_ya' => 0,
+                'pertanyaan_16_jawaban_tidak' => 0,
+                'pertanyaan_17_jawaban_ya' => 0,
+                'pertanyaan_17_jawaban_tidak' => 0,
                 'last_updated_at' => null
             ];
         }
@@ -1077,6 +1136,18 @@ class GetDataController extends Controller
                 DB::raw('SUM(CASE WHEN pertanyaan_3 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_3_jawaban_tidak'),
                 DB::raw('SUM(CASE WHEN pertanyaan_4 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_4_jawaban_ya'),
                 DB::raw('SUM(CASE WHEN pertanyaan_4 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_4_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_5 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_5_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_5 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_5_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_6 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_6_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_6 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_6_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_7 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_7_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_7 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_7_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_8 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_8_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_8 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_8_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_9 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_9_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_9 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_9_jawaban_tidak'),
+                DB::raw('SUM(CASE WHEN pertanyaan_10 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_10_jawaban_ya'),
+                DB::raw('SUM(CASE WHEN pertanyaan_10 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_10_jawaban_tidak'),
                 DB::raw('MAX(updated_at) as last_updated_at'),
             )
             ->where('form_id', $id)
@@ -1096,6 +1167,18 @@ class GetDataController extends Controller
                 'pertanyaan_3_jawaban_tidak' => 0,
                 'pertanyaan_4_jawaban_ya' => 0,
                 'pertanyaan_4_jawaban_tidak' => 0,
+                'pertanyaan_5_jawaban_ya' => 0,
+                'pertanyaan_5_jawaban_tidak' => 0,
+                'pertanyaan_6_jawaban_ya' => 0,
+                'pertanyaan_6_jawaban_tidak' => 0,
+                'pertanyaan_7_jawaban_ya' => 0,
+                'pertanyaan_7_jawaban_tidak' => 0,
+                'pertanyaan_8_jawaban_ya' => 0,
+                'pertanyaan_8_jawaban_tidak' => 0,
+                'pertanyaan_9_jawaban_ya' => 0,
+                'pertanyaan_9_jawaban_tidak' => 0,
+                'pertanyaan_10_jawaban_ya' => 0,
+                'pertanyaan_10_jawaban_tidak' => 0,
                 'last_updated_at' => null
             ];
         }
@@ -1109,408 +1192,6 @@ class GetDataController extends Controller
     public function kritik_saran_section_7($id)
     {
         $data = DB::table('pemantauan_manajemen_risiko')
-            ->select('kritik_saran')
-            ->where('form_id', $id)
-            ->get();
-
-        // Handle empty data
-        if ($data->isEmpty()) {
-            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
-        }
-
-        // Kirim data ke view
-        return response()->json($data);
-    }
-
-    public function section_8($id)
-    {
-        $data = DB::table('pengumpulan_manajemen_risiko')
-            ->select(
-                'form_id',
-                DB::raw('COUNT(*) as total_responses'),
-                DB::raw('SUM(CASE WHEN pertanyaan_1 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_1_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_1 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_1_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_2 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_2_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_2 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_2_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_3 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_3_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_3 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_3_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_4 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_4_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_4 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_4_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_5 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_5_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_5 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_5_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_6 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_6_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_6 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_6_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_7 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_7_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_7 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_7_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_8 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_8_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_8 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_8_jawaban_tidak'),
-                DB::raw('MAX(updated_at) as last_updated_at'),
-            )
-            ->where('form_id', $id)
-            ->groupBy('form_id')
-            ->first();
-
-        // Handle empty data
-        if (!$data) {
-            $data = (object)[
-                'form_id' => $id,
-                'total_responses' => 0,
-                'pertanyaan_1_jawaban_ya' => 0,
-                'pertanyaan_1_jawaban_tidak' => 0,
-                'pertanyaan_2_jawaban_ya' => 0,
-                'pertanyaan_2_jawaban_tidak' => 0,
-                'pertanyaan_3_jawaban_ya' => 0,
-                'pertanyaan_3_jawaban_tidak' => 0,
-                'pertanyaan_4_jawaban_ya' => 0,
-                'pertanyaan_4_jawaban_tidak' => 0,
-                'pertanyaan_5_jawaban_ya' => 0,
-                'pertanyaan_5_jawaban_tidak' => 0,
-                'pertanyaan_6_jawaban_ya' => 0,
-                'pertanyaan_6_jawaban_tidak' => 0,
-                'pertanyaan_7_jawaban_ya' => 0,
-                'pertanyaan_7_jawaban_tidak' => 0,
-                'pertanyaan_8_jawaban_ya' => 0,
-                'pertanyaan_8_jawaban_tidak' => 0,
-                'last_updated_at' => null
-            ];
-        }
-
-        $total_auditee = DB::table('auditee')->where('form_id', $id)->count();
-        $data->total_auditee = $total_auditee == null ? 0 : $total_auditee;
-        // Kirim data ke view
-        return response()->json($data);
-    }
-
-    public function kritik_saran_section_8($id)
-    {
-        $data = DB::table('pengumpulan_manajemen_risiko')
-            ->select('kritik_saran')
-            ->where('form_id', $id)
-            ->get();
-
-        // Handle empty data
-        if ($data->isEmpty()) {
-            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
-        }
-
-        // Kirim data ke view
-        return response()->json($data);
-    }
-
-    public function section_9($id)
-    {
-        $data = DB::table('menganalisis_risiko')
-            ->select(
-                'form_id',
-                DB::raw('COUNT(*) as total_responses'),
-                DB::raw('SUM(CASE WHEN pertanyaan_1 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_1_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_1 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_1_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_2 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_2_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_2 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_2_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_3 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_3_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_3 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_3_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_4 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_4_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_4 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_4_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_5 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_5_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_5 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_5_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_6 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_6_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_6 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_6_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_7 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_7_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_7 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_7_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_8 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_8_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_8 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_8_jawaban_tidak'),
-                DB::raw('MAX(updated_at) as last_updated_at'),
-            )
-            ->where('form_id', $id)
-            ->groupBy('form_id')
-            ->first();
-
-        // Handle empty data
-        if (!$data) {
-            $data = (object)[
-                'form_id' => $id,
-                'total_responses' => 0,
-                'pertanyaan_1_jawaban_ya' => 0,
-                'pertanyaan_1_jawaban_tidak' => 0,
-                'pertanyaan_2_jawaban_ya' => 0,
-                'pertanyaan_2_jawaban_tidak' => 0,
-                'pertanyaan_3_jawaban_ya' => 0,
-                'pertanyaan_3_jawaban_tidak' => 0,
-                'pertanyaan_4_jawaban_ya' => 0,
-                'pertanyaan_4_jawaban_tidak' => 0,
-                'pertanyaan_5_jawaban_ya' => 0,
-                'pertanyaan_5_jawaban_tidak' => 0,
-                'pertanyaan_6_jawaban_ya' => 0,
-                'pertanyaan_6_jawaban_tidak' => 0,
-                'pertanyaan_7_jawaban_ya' => 0,
-                'pertanyaan_7_jawaban_tidak' => 0,
-                'pertanyaan_8_jawaban_ya' => 0,
-                'pertanyaan_8_jawaban_tidak' => 0,
-                'last_updated_at' => null
-            ];
-        }
-
-        $total_auditee = DB::table('auditee')->where('form_id', $id)->count();
-        $data->total_auditee = $total_auditee == null ? 0 : $total_auditee;
-        // Kirim data ke view
-        return response()->json($data);
-    }
-
-    public function kritik_saran_section_9($id)
-    {
-        $data = DB::table('menganalisis_risiko')
-            ->select('kritik_saran')
-            ->where('form_id', $id)
-            ->get();
-
-        // Handle empty data
-        if ($data->isEmpty()) {
-            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
-        }
-
-        // Kirim data ke view
-        return response()->json($data);
-    }
-
-    public function section_10($id)
-    {
-        $data = DB::table('memelihara_profil_risiko')
-            ->select(
-                'form_id',
-                DB::raw('COUNT(*) as total_responses'),
-                DB::raw('SUM(CASE WHEN pertanyaan_1 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_1_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_1 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_1_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_2 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_2_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_2 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_2_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_3 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_3_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_3 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_3_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_4 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_4_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_4 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_4_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_5 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_5_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_5 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_5_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_6 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_6_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_6 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_6_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_7 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_7_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_7 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_7_jawaban_tidak'),
-                DB::raw('MAX(updated_at) as last_updated_at'),
-            )
-            ->where('form_id', $id)
-            ->groupBy('form_id')
-            ->first();
-
-        // Handle empty data
-        if (!$data) {
-            $data = (object)[
-                'form_id' => $id,
-                'total_responses' => 0,
-                'pertanyaan_1_jawaban_ya' => 0,
-                'pertanyaan_1_jawaban_tidak' => 0,
-                'pertanyaan_2_jawaban_ya' => 0,
-                'pertanyaan_2_jawaban_tidak' => 0,
-                'pertanyaan_3_jawaban_ya' => 0,
-                'pertanyaan_3_jawaban_tidak' => 0,
-                'pertanyaan_4_jawaban_ya' => 0,
-                'pertanyaan_4_jawaban_tidak' => 0,
-                'pertanyaan_5_jawaban_ya' => 0,
-                'pertanyaan_5_jawaban_tidak' => 0,
-                'pertanyaan_6_jawaban_ya' => 0,
-                'pertanyaan_6_jawaban_tidak' => 0,
-                'pertanyaan_7_jawaban_ya' => 0,
-                'pertanyaan_7_jawaban_tidak' => 0,
-                'last_updated_at' => null
-            ];
-        }
-
-        $total_auditee = DB::table('auditee')->where('form_id', $id)->count();
-        $data->total_auditee = $total_auditee == null ? 0 : $total_auditee;
-        // Kirim data ke view
-        return response()->json($data);
-    }
-
-    public function kritik_saran_section_10($id)
-    {
-        $data = DB::table('memelihara_profil_risiko')
-            ->select('kritik_saran')
-            ->where('form_id', $id)
-            ->get();
-
-        // Handle empty data
-        if ($data->isEmpty()) {
-            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
-        }
-
-        // Kirim data ke view
-        return response()->json($data);
-    }
-
-    public function section_11($id)
-    {
-        $data = DB::table('mengartikulasikan_risiko')
-            ->select(
-                'form_id',
-                DB::raw('COUNT(*) as total_responses'),
-                DB::raw('SUM(CASE WHEN pertanyaan_1 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_1_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_1 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_1_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_2 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_2_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_2 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_2_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_3 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_3_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_3 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_3_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_4 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_4_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_4 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_4_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_5 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_5_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_5 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_5_jawaban_tidak'),
-                DB::raw('MAX(updated_at) as last_updated_at'),
-            )
-            ->where('form_id', $id)
-            ->groupBy('form_id')
-            ->first();
-
-        // Handle empty data
-        if (!$data) {
-            $data = (object)[
-                'form_id' => $id,
-                'total_responses' => 0,
-                'pertanyaan_1_jawaban_ya' => 0,
-                'pertanyaan_1_jawaban_tidak' => 0,
-                'pertanyaan_2_jawaban_ya' => 0,
-                'pertanyaan_2_jawaban_tidak' => 0,
-                'pertanyaan_3_jawaban_ya' => 0,
-                'pertanyaan_3_jawaban_tidak' => 0,
-                'pertanyaan_4_jawaban_ya' => 0,
-                'pertanyaan_4_jawaban_tidak' => 0,
-                'pertanyaan_5_jawaban_ya' => 0,
-                'pertanyaan_5_jawaban_tidak' => 0,
-                'last_updated_at' => null
-            ];
-        }
-
-        $total_auditee = DB::table('auditee')->where('form_id', $id)->count();
-        $data->total_auditee = $total_auditee == null ? 0 : $total_auditee;
-        // Kirim data ke view
-        return response()->json($data);
-    }
-
-    public function kritik_saran_section_11($id)
-    {
-        $data = DB::table('mengartikulasikan_risiko')
-            ->select('kritik_saran')
-            ->where('form_id', $id)
-            ->get();
-
-        // Handle empty data
-        if ($data->isEmpty()) {
-            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
-        }
-
-        // Kirim data ke view
-        return response()->json($data);
-    }
-
-    public function section_12($id)
-    {
-        $data = DB::table('menentukan_portofolio_mitigasi_risiko')
-            ->select(
-                'form_id',
-                DB::raw('COUNT(*) as total_responses'),
-                DB::raw('SUM(CASE WHEN pertanyaan_1 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_1_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_1 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_1_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_2 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_2_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_2 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_2_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_3 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_3_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_3 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_3_jawaban_tidak'),
-                DB::raw('MAX(updated_at) as last_updated_at'),
-            )
-            ->where('form_id', $id)
-            ->groupBy('form_id')
-            ->first();
-
-        // Handle empty data
-        if (!$data) {
-            $data = (object)[
-                'form_id' => $id,
-                'total_responses' => 0,
-                'pertanyaan_1_jawaban_ya' => 0,
-                'pertanyaan_1_jawaban_tidak' => 0,
-                'pertanyaan_2_jawaban_ya' => 0,
-                'pertanyaan_2_jawaban_tidak' => 0,
-                'pertanyaan_3_jawaban_ya' => 0,
-                'pertanyaan_3_jawaban_tidak' => 0,
-                'last_updated_at' => null
-            ];
-        }
-
-        $total_auditee = DB::table('auditee')->where('form_id', $id)->count();
-        $data->total_auditee = $total_auditee == null ? 0 : $total_auditee;
-        // Kirim data ke view
-        return response()->json($data);
-    }
-
-    public function kritik_saran_section_12($id)
-    {
-        $data = DB::table('menentukan_portofolio_mitigasi_risiko')
-            ->select('kritik_saran')
-            ->where('form_id', $id)
-            ->get();
-
-        // Handle empty data
-        if ($data->isEmpty()) {
-            return response()->json(['kritik_saran' => 'Tidak ada kritik dan saran']);
-        }
-
-        // Kirim data ke view
-        return response()->json($data);
-    }
-
-    public function section_13($id)
-    {
-        $data = DB::table('menanggapi_risiko')
-            ->select(
-                'form_id',
-                DB::raw('COUNT(*) as total_responses'),
-                DB::raw('SUM(CASE WHEN pertanyaan_1 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_1_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_1 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_1_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_2 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_2_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_2 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_2_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_3 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_3_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_3 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_3_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_4 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_4_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_4 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_4_jawaban_tidak'),
-                DB::raw('SUM(CASE WHEN pertanyaan_5 = "Ya" THEN 1 ELSE 0 END) as pertanyaan_5_jawaban_ya'),
-                DB::raw('SUM(CASE WHEN pertanyaan_5 = "Tidak" THEN 1 ELSE 0 END) as pertanyaan_5_jawaban_tidak'),
-                DB::raw('MAX(updated_at) as last_updated_at'),
-            )
-            ->where('form_id', $id)
-            ->groupBy('form_id')
-            ->first();
-
-        // Handle empty data
-        if (!$data) {
-            $data = (object)[
-                'form_id' => $id,
-                'total_responses' => 0,
-                'pertanyaan_1_jawaban_ya' => 0,
-                'pertanyaan_1_jawaban_tidak' => 0,
-                'pertanyaan_2_jawaban_ya' => 0,
-                'pertanyaan_2_jawaban_tidak' => 0,
-                'pertanyaan_3_jawaban_ya' => 0,
-                'pertanyaan_3_jawaban_tidak' => 0,
-                'pertanyaan_4_jawaban_ya' => 0,
-                'pertanyaan_4_jawaban_tidak' => 0,
-                'pertanyaan_5_jawaban_ya' => 0,
-                'pertanyaan_5_jawaban_tidak' => 0,
-                'last_updated_at' => null
-            ];
-        }
-
-        $total_auditee = DB::table('auditee')->where('form_id', $id)->count();
-        $data->total_auditee = $total_auditee == null ? 0 : $total_auditee;
-        // Kirim data ke view
-        return response()->json($data);
-    }
-
-    public function kritik_saran_section_13($id)
-    {
-        $data = DB::table('menanggapi_risiko')
             ->select('kritik_saran')
             ->where('form_id', $id)
             ->get();

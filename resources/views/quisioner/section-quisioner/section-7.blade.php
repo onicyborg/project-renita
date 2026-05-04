@@ -3,22 +3,26 @@
     @csrf
     <div class="card shadow mb-4" id="section-7">
         <div class="card-header">
-            <strong class="card-title">Section 7 (Identifikasi optimasi risiko teknologi informasi Bagian Ketiga:
-                Pemantauan
-                Manajemen Risiko)</strong>
+            <strong class="card-title">Section 7 (Monitoring &amp; Review ISMS)</strong>
         </div>
         <div class="card-body">
+            @php
+                $questions = [
+                    'Apakah organisasi melakukan peninjauan berkala terhadap efektivitas ISMS?',
+                    'Apakah peninjauan tersebut mencakup kesesuaian dengan kebijakan dan tujuan ISMS?',
+                    'Apakah organisasi melakukan evaluasi terhadap praktik keamanan dan privasi?',
+                    'Apakah audit ISMS dilakukan secara berkala sesuai rencana?',
+                    'Apakah manajemen melakukan tinjauan terhadap ISMS secara rutin?',
+                    'Apakah tinjauan manajemen memastikan bahwa ruang lingkup ISMS tetap relevan?',
+                    'Apakah organisasi mengidentifikasi peluang perbaikan dari hasil tinjauan ISMS?',
+                    'Apakah tindakan dan kejadian yang berdampak pada ISMS dicatat dan didokumentasikan?',
+                    'Apakah hasil monitoring dan review digunakan sebagai masukan dalam perbaikan rencana keamanan?',
+                    'Apakah organisasi melakukan perbaikan berkelanjutan terhadap ISMS berdasarkan hasil evaluasi?',
+                ];
+            @endphp
             <p class="mt-3">
-                Bagian ketiga dari Optimasi Risiko Teknologi Informasi (TI) ini bertujuan untuk mengidentifikasi
-                bagaimana
-                organisasi memantau efektivitas pengelolaan risiko TI. Kuisioner ini berfokus pada evaluasi proses
-                pemantauan,
-                termasuk pengukuran, pelaporan, dan tindakan korektif terkait risiko TI.
-                <br>
                 Untuk setiap pernyataan yang diberikan, harap pilih <strong>Ya</strong> atau <strong>Tidak</strong>
-                sesuai
-                dengan kondisi yang berlaku di organisasi
-                Anda.
+                sesuai dengan kondisi yang berlaku di organisasi Anda.
             </p>
 
             <div class="table-responsive mt-4">
@@ -30,73 +34,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Melaporkan setiap isu manajemen risiko kepada dewan direksi
-                                atau komite eksekutif.</td>
-                            <td>
-                                <select class="custom-select text-center" id="custom-select" name="pertanyaan_1"
-                                    required {{ $status == 'view' ? 'disabled' : '' }}>
-                                    <option value="">- Pilih -</option>
-                                    <option value="Ya"
-                                        {{ $auditee->pemantauan_manajemen_risiko != null && $auditee->pemantauan_manajemen_risiko->pertanyaan_1 == 'Ya' ? 'selected' : '' }}>
-                                        Ya</option>
-                                    <option value="Tidak"
-                                        {{ $auditee->pemantauan_manajemen_risiko != null && $auditee->pemantauan_manajemen_risiko->pertanyaan_1 == 'Tidak' ? 'selected' : '' }}>
-                                        Tidak</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Memantau sejauh mana profil risiko dikelola sesuai dengan
-                                appetite risiko dan batas toleransi risiko organisasi.</td>
-                            <td>
-                                <select class="custom-select text-center" id="custom-select" name="pertanyaan_2"
-                                    required {{ $status == 'view' ? 'disabled' : '' }}>
-                                    <option value="">- Pilih -</option>
-                                    <option value="Ya"
-                                        {{ $auditee->pemantauan_manajemen_risiko != null && $auditee->pemantauan_manajemen_risiko->pertanyaan_2 == 'Ya' ? 'selected' : '' }}>
-                                        Ya</option>
-                                    <option value="Tidak"
-                                        {{ $auditee->pemantauan_manajemen_risiko != null && $auditee->pemantauan_manajemen_risiko->pertanyaan_2 == 'Tidak' ? 'selected' : '' }}>
-                                        Tidak</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Memantau tujuan utama dan metrik dari tata kelola dan proses
-                                manajemen risiko terhadap target, menganalisis penyebab
-                                penyimpangan, dan mengambil tindakan perbaikan untuk
-                                mengatasi penyebab utamanya.</td>
-                            <td>
-                                <select class="custom-select text-center" id="custom-select" name="pertanyaan_3"
-                                    required {{ $status == 'view' ? 'disabled' : '' }}>
-                                    <option value="">- Pilih -</option>
-                                    <option value="Ya"
-                                        {{ $auditee->pemantauan_manajemen_risiko != null && $auditee->pemantauan_manajemen_risiko->pertanyaan_3 == 'Ya' ? 'selected' : '' }}>
-                                        Ya</option>
-                                    <option value="Tidak"
-                                        {{ $auditee->pemantauan_manajemen_risiko != null && $auditee->pemantauan_manajemen_risiko->pertanyaan_3 == 'Tidak' ? 'selected' : '' }}>
-                                        Tidak</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Memungkinkan pemangku kepentingan utama untuk meninjau
-                                kemajuan organisasi dalam mencapai tujuan yang telah
-                                ditetapkan.</td>
-                            <td>
-                                <select class="custom-select text-center" id="custom-select" name="pertanyaan_4"
-                                    required {{ $status == 'view' ? 'disabled' : '' }}>
-                                    <option value="">- Pilih -</option>
-                                    <option value="Ya"
-                                        {{ $auditee->pemantauan_manajemen_risiko != null && $auditee->pemantauan_manajemen_risiko->pertanyaan_4 == 'Ya' ? 'selected' : '' }}>
-                                        Ya</option>
-                                    <option value="Tidak"
-                                        {{ $auditee->pemantauan_manajemen_risiko != null && $auditee->pemantauan_manajemen_risiko->pertanyaan_4 == 'Tidak' ? 'selected' : '' }}>
-                                        Tidak</option>
-                                </select>
-                            </td>
-                        </tr>
+                        @foreach ($questions as $i => $question)
+                            @php
+                                $no = $i + 1;
+                                $value = data_get($auditee->pemantauan_manajemen_risiko, 'pertanyaan_' . $no);
+                            @endphp
+                            <tr>
+                                <td>{{ $question }}</td>
+                                <td>
+                                    <select class="custom-select text-center" id="custom-select"
+                                        name="pertanyaan_{{ $no }}" required {{ $status == 'view' ? 'disabled' : '' }}>
+                                        <option value="">- Pilih -</option>
+                                        <option value="Ya" {{ $value === 'Ya' ? 'selected' : '' }}>Ya</option>
+                                        <option value="Tidak" {{ $value === 'Tidak' ? 'selected' : '' }}>Tidak</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
                 <div class="form-group mt-4">

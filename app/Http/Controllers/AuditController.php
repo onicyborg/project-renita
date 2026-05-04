@@ -84,12 +84,6 @@ class AuditController extends Controller
                 $auditee->evaluasi_manajemen_risiko,
                 $auditee->arahan_manajemen_risiko,
                 $auditee->pemantauan_manajemen_risiko,
-                $auditee->pengumpulan_manajemen_risiko,
-                $auditee->menganalisis_risiko,
-                $auditee->memelihara_profil_risiko,
-                $auditee->mengartikulasikan_risiko,
-                $auditee->menentukan_portofolio_mitigasi_risiko,
-                $auditee->menanggapi_risiko,
             ])->filter()->count();
         });
 
@@ -145,12 +139,6 @@ class AuditController extends Controller
             'evaluasi_manajemen_risiko',
             'arahan_manajemen_risiko',
             'pemantauan_manajemen_risiko',
-            'pengumpulan_manajemen_risiko',
-            'menganalisis_risiko',
-            'memelihara_profil_risiko',
-            'mengartikulasikan_risiko',
-            'menentukan_portofolio_mitigasi_risiko',
-            'menanggapi_risiko'
         ];
 
         // Check each table for existing data
@@ -210,7 +198,7 @@ class AuditController extends Controller
         $form = Form::findOrFail($id);
         $token = session('token_valid_' . $id);
 
-        $auditee = $form->auditee()->where('token', $token)->with('strategi_organisasi', 'tujuan_organisasi', 'profile_resiko', 'issue_risiko', 'evaluasi_manajemen_risiko', 'arahan_manajemen_risiko', 'pemantauan_manajemen_risiko', 'pengumpulan_manajemen_risiko', 'menganalisis_risiko', 'memelihara_profil_risiko', 'mengartikulasikan_risiko', 'menentukan_portofolio_mitigasi_risiko', 'menanggapi_risiko')->first();
+        $auditee = $form->auditee()->where('token', $token)->with('strategi_organisasi', 'tujuan_organisasi', 'profile_resiko', 'issue_risiko', 'evaluasi_manajemen_risiko', 'arahan_manajemen_risiko', 'pemantauan_manajemen_risiko')->first();
 
         $status = 'create';
         // dd($auditee->tujuan_organisasi);
@@ -222,7 +210,7 @@ class AuditController extends Controller
     public function check_response($id)
     {
 
-        $auditee = Auditee::where('id', $id)->with('strategi_organisasi', 'tujuan_organisasi', 'profile_resiko', 'issue_risiko', 'evaluasi_manajemen_risiko', 'arahan_manajemen_risiko', 'pemantauan_manajemen_risiko', 'pengumpulan_manajemen_risiko', 'menganalisis_risiko', 'memelihara_profil_risiko', 'mengartikulasikan_risiko', 'menentukan_portofolio_mitigasi_risiko', 'menanggapi_risiko')->first();
+        $auditee = Auditee::where('id', $id)->with('strategi_organisasi', 'tujuan_organisasi', 'profile_resiko', 'issue_risiko', 'evaluasi_manajemen_risiko', 'arahan_manajemen_risiko', 'pemantauan_manajemen_risiko')->first();
         $form = Form::findOrFail($auditee->form_id);
         $token = $auditee->token;
         $status = 'view';

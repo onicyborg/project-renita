@@ -48,24 +48,6 @@
 
                                             <!-- Section 7 -->
                                             @include('section-recap.section-7')
-
-                                            <!-- Section 8 -->
-                                            @include('section-recap.section-8')
-
-                                            <!-- Section 9 -->
-                                            @include('section-recap.section-9')
-
-                                            <!-- Section 10 -->
-                                            @include('section-recap.section-10')
-
-                                            <!-- Section 11 -->
-                                            @include('section-recap.section-11')
-
-                                            <!-- Section 12 -->
-                                            @include('section-recap.section-12')
-
-                                            <!-- Section 13 -->
-                                            @include('section-recap.section-13')
                                         </div>
 
                                         <div class="tab-pane fade mb-4" id="v-pills-profile" role="tabpanel"

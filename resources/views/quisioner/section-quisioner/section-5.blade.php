@@ -3,19 +3,26 @@
     @csrf
     <div class="card shadow mb-4" id="section-5">
         <div class="card-header">
-            <strong class="card-title">Section 5 (Identifikasi optimasi risiko teknologi informasi Bagian Pertama:
-                Evaluasi
-                Manajemen Risiko)</strong>
+            <strong class="card-title">Section 5 (ISMS (Establish &amp; Maintain))</strong>
         </div>
         <div class="card-body">
+            @php
+                $questions = [
+                    'Apakah organisasi telah menetapkan ruang lingkup dan batasan ISMS yang mencakup organisasi, lokasi, aset, dan teknologi?',
+                    'Apakah terdapat dokumentasi yang menjelaskan pengecualian ruang lingkup ISMS beserta alasannya?',
+                    'Apakah ISMS telah ditetapkan sesuai dengan kebijakan dan konteks operasional organisasi?',
+                    'Apakah ISMS telah diselaraskan dengan pendekatan pengelolaan keamanan secara keseluruhan di organisasi?',
+                    'Apakah terdapat persetujuan manajemen dalam implementasi, operasional, atau perubahan ISMS?',
+                    'Apakah organisasi memiliki dokumen statement of applicability yang menggambarkan ruang lingkup ISMS?',
+                    'Apakah dokumen statement of applicability tersebut diperbarui secara berkala?',
+                    'Apakah peran dan tanggung jawab dalam manajemen keamanan informasi telah ditentukan dengan jelas?',
+                    'Apakah peran dan tanggung jawab tersebut telah dikomunikasikan kepada pihak terkait?',
+                    'Apakah pendekatan ISMS telah dikomunikasikan kepada seluruh pemangku kepentingan?',
+                ];
+            @endphp
             <p class="mt-3">
-                Bagian pertama dari Optimasi Risiko Teknologi Informasi (TI) ini bertujuan untuk mengevaluasi cara
-                organisasi
-                memahami, menilai, dan menentukan strategi pengelolaan risiko TI. Fokusnya adalah pada analisis awal dan
-                identifikasi risiko TI yang relevan dengan tujuan strategis organisasi.
-                <br>
-                Pengisian pada kolom aktivitas dilakukan harap pilih <strong>Ya (Aktivitas dilakukan)</strong> atau
-                <strong>Tidak (Aktivitas tidak dilakukan)</strong> sesuai kondisi yang berlaku di organisasi
+                Untuk setiap pernyataan yang diberikan, harap pilih <strong>Ya</strong> atau <strong>Tidak</strong>
+                sesuai dengan kondisi yang berlaku di organisasi Anda.
             </p>
 
             <div class="table-responsive mt-4">
@@ -27,123 +34,23 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>Memahami organisasi dan konteksnya yang berkaitan dengan
-                                risiko Teknologi Informasi (TI).</td>
-                            <td>
-                                <select class="custom-select text-center" id="custom-select" name="pertanyaan_1"
-                                    required {{ $status == 'view' ? 'disabled' : '' }}>
-                                    <option value="">- Pilih -</option>
-                                    <option value="Ya"
-                                        {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_1 == 'Ya' ? 'selected' : '' }}>
-                                        Ya</option>
-                                    <option value="Tidak"
-                                        {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_1 == 'Tidak' ? 'selected' : '' }}>
-                                        Tidak</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Menentukan tingkat appetite risiko organisasi, yaitu tingkat risiko
-                                TI yang bersedia diterima organisasi dalam mencapai tujuan
-                                strategisnya.</td>
-                            <td>
-                                <select class="custom-select text-center" id="custom-select" name="pertanyaan_2"
-                                    required {{ $status == 'view' ? 'disabled' : '' }}>
-                                    <option value="">- Pilih -</option>
-                                    <option value="Ya"
-                                        {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_2 == 'Ya' ? 'selected' : '' }}>
-                                        Ya</option>
-                                    <option value="Tidak"
-                                        {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_2 == 'Tidak' ? 'selected' : '' }}>
-                                        Tidak</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Menentukan tingkat toleransi risiko terhadap appetite risiko, yaitu
-                                penyimpangan sementara yang masih dapat diterima dari batas
-                                risiko yang telah ditentukan.</td>
-                            <td>
-                                <select class="custom-select text-center" id="custom-select" name="pertanyaan_3"
-                                    required {{ $status == 'view' ? 'disabled' : '' }}>
-                                    <option value="">- Pilih -</option>
-                                    <option value="Ya"
-                                        {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_3 == 'Ya' ? 'selected' : '' }}>
-                                        Ya</option>
-                                    <option value="Tidak"
-                                        {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_3 == 'Tidak' ? 'selected' : '' }}>
-                                        Tidak</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Menentukan sejauh mana strategi risiko TI selaras dengan strategi
-                                risiko organisasi secara keseluruhan, serta memastikan bahwa
-                                appetite risiko berada di bawah kapasitas risiko organisasi.</td>
-                            <td>
-                                <select class="custom-select text-center" id="custom-select" name="pertanyaan_4"
-                                    required {{ $status == 'view' ? 'disabled' : '' }}>
-                                    <option value="">- Pilih -</option>
-                                    <option value="Ya"
-                                        {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_4 == 'Ya' ? 'selected' : '' }}>
-                                        Ya</option>
-                                    <option value="Tidak"
-                                        {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_4 == 'Tidak' ? 'selected' : '' }}>
-                                        Tidak</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Secara proaktif mengevaluasi faktor risiko TI sebelum keputusan
-                                strategis dibuat, serta memastikan bahwa pertimbangan risiko
-                                menjadi bagian dari proses pengambilan keputusan strategis.</td>
-                            <td>
-                                <select class="custom-select text-center" id="custom-select" name="pertanyaan_5"
-                                    required {{ $status == 'view' ? 'disabled' : '' }}>
-                                    <option value="">- Pilih -</option>
-                                    <option value="Ya"
-                                        {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_5 == 'Ya' ? 'selected' : '' }}>
-                                        Ya</option>
-                                    <option value="Tidak"
-                                        {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_5 == 'Tidak' ? 'selected' : '' }}>
-                                        Tidak</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Mengevaluasi aktivitas manajemen risiko untuk memastikan
-                                kesesuaian dengan kapasitas organisasi dalam menangani
-                                kerugian TI dan toleransi risiko dari pihak manajemen.</td>
-                            <td>
-                                <select class="custom-select text-center" id="custom-select" name="pertanyaan_6"
-                                    required {{ $status == 'view' ? 'disabled' : '' }}>
-                                    <option value="">- Pilih -</option>
-                                    <option value="Ya"
-                                        {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_6 == 'Ya' ? 'selected' : '' }}>
-                                        Ya</option>
-                                    <option value="Tidak"
-                                        {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_6 == 'Tidak' ? 'selected' : '' }}>
-                                        Tidak</option>
-                                </select>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td>Merekrut dan mempertahankan keterampilan serta personel yang
-                                diperlukan untuk manajemen risiko TI.</td>
-                            <td>
-                                <select class="custom-select text-center" id="custom-select" name="pertanyaan_7"
-                                    required {{ $status == 'view' ? 'disabled' : '' }}>
-                                    <option value="">- Pilih -</option>
-                                    <option value="Ya"
-                                        {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_7 == 'Ya' ? 'selected' : '' }}>
-                                        Ya</option>
-                                    <option value="Tidak"
-                                        {{ $auditee->evaluasi_manajemen_risiko != null && $auditee->evaluasi_manajemen_risiko->pertanyaan_7 == 'Tidak' ? 'selected' : '' }}>
-                                        Tidak</option>
-                                </select>
-                            </td>
-                        </tr>
+                        @foreach ($questions as $i => $question)
+                            @php
+                                $no = $i + 1;
+                                $value = data_get($auditee->evaluasi_manajemen_risiko, 'pertanyaan_' . $no);
+                            @endphp
+                            <tr>
+                                <td>{{ $question }}</td>
+                                <td>
+                                    <select class="custom-select text-center" id="custom-select"
+                                        name="pertanyaan_{{ $no }}" required {{ $status == 'view' ? 'disabled' : '' }}>
+                                        <option value="">- Pilih -</option>
+                                        <option value="Ya" {{ $value === 'Ya' ? 'selected' : '' }}>Ya</option>
+                                        <option value="Tidak" {{ $value === 'Tidak' ? 'selected' : '' }}>Tidak</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        @endforeach
                     </tbody>
                 </table>
                 <div class="form-group mt-4">

@@ -60,36 +60,6 @@ class Auditee extends Model
         return $this->hasOne(PemantauanManajemenRisiko::class, 'auditee_id', 'id');
     }
 
-    public function pengumpulan_manajemen_risiko()
-    {
-        return $this->hasOne(PengumpulanManajemenRisiko::class, 'auditee_id', 'id');
-    }
-
-    public function menganalisis_risiko()
-    {
-        return $this->hasOne(MenganalisisRisiko::class, 'auditee_id', 'id');
-    }
-
-    public function memelihara_profil_risiko()
-    {
-        return $this->hasOne(MemeliharaProfilRisiko::class, 'auditee_id', 'id');
-    }
-
-    public function mengartikulasikan_risiko()
-    {
-        return $this->hasOne(MengartikulasiRisiko::class, 'auditee_id', 'id');
-    }
-
-    public function menentukan_portofolio_mitigasi_risiko()
-    {
-        return $this->hasOne(MenentukanPortofolioMitigasiRisiko::class, 'auditee_id', 'id');
-    }
-
-    public function menanggapi_risiko()
-    {
-        return $this->hasOne(MenanggapiRisiko::class, 'auditee_id', 'id');
-    }
-
     protected static function boot()
     {
         parent::boot();

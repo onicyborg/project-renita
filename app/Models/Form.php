@@ -66,36 +66,6 @@ class Form extends Model
         return $this->hasMany(PemantauanManajemenRisiko::class, 'form_id', 'id');
     }
 
-    public function pengumpulan_manajemen_risiko()
-    {
-        return $this->hasMany(PengumpulanManajemenRisiko::class, 'form_id', 'id');
-    }
-
-    public function menganalisis_risiko()
-    {
-        return $this->hasMany(MenganalisisRisiko::class, 'form_id', 'id');
-    }
-
-    public function memelihara_profil_risiko()
-    {
-        return $this->hasMany(MemeliharaProfilRisiko::class, 'form_id', 'id');
-    }
-
-    public function mengartikulasikan_risiko()
-    {
-        return $this->hasMany(MengartikulasiRisiko::class, 'form_id', 'id');
-    }
-
-    public function menentukan_portofolio_mitigasi_risiko()
-    {
-        return $this->hasMany(MenentukanPortofolioMitigasiRisiko::class, 'form_id', 'id');
-    }
-
-    public function menanggapi_risiko()
-    {
-        return $this->hasMany(MenanggapiRisiko::class, 'form_id', 'id');
-    }
-
     protected static function boot()
     {
         parent::boot();
