@@ -236,7 +236,6 @@ class QuisionerController extends Controller
     public function submit_section_5(Request $request, $id, $token)
     {
         $auditee = Auditee::where('token', $token)->first();
-        $kritikSaran = $request->kritik_saran ?? '';
 
         if (!$auditee->evaluasi_manajemen_risiko) {
             $auditee->evaluasi_manajemen_risiko()->create([
@@ -250,7 +249,7 @@ class QuisionerController extends Controller
                 'pertanyaan_8' => $request->pertanyaan_8,
                 'pertanyaan_9' => $request->pertanyaan_9,
                 'pertanyaan_10' => $request->pertanyaan_10,
-                'kritik_saran' => $kritikSaran,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         } else {
@@ -265,7 +264,7 @@ class QuisionerController extends Controller
                 'pertanyaan_8' => $request->pertanyaan_8,
                 'pertanyaan_9' => $request->pertanyaan_9,
                 'pertanyaan_10' => $request->pertanyaan_10,
-                'kritik_saran' => $kritikSaran,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         }
@@ -276,7 +275,6 @@ class QuisionerController extends Controller
     public function submit_section_6(Request $request, $id, $token)
     {
         $auditee = Auditee::where('token', $token)->first();
-        $kritikSaran = $request->kritik_saran ?? '';
 
         if (!$auditee->arahan_manajemen_risiko) {
             $auditee->arahan_manajemen_risiko()->create([
@@ -297,7 +295,7 @@ class QuisionerController extends Controller
                 'pertanyaan_15' => $request->pertanyaan_15,
                 'pertanyaan_16' => $request->pertanyaan_16,
                 'pertanyaan_17' => $request->pertanyaan_17,
-                'kritik_saran' => $kritikSaran,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         } else {
@@ -319,7 +317,7 @@ class QuisionerController extends Controller
                 'pertanyaan_15' => $request->pertanyaan_15,
                 'pertanyaan_16' => $request->pertanyaan_16,
                 'pertanyaan_17' => $request->pertanyaan_17,
-                'kritik_saran' => $kritikSaran,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         }
@@ -330,7 +328,6 @@ class QuisionerController extends Controller
     public function submit_section_7(Request $request, $id, $token)
     {
         $auditee = Auditee::where('token', $token)->first();
-        $kritikSaran = $request->kritik_saran ?? '';
 
         if (!$auditee->pemantauan_manajemen_risiko) {
             $auditee->pemantauan_manajemen_risiko()->create([
@@ -344,7 +341,7 @@ class QuisionerController extends Controller
                 'pertanyaan_8' => $request->pertanyaan_8,
                 'pertanyaan_9' => $request->pertanyaan_9,
                 'pertanyaan_10' => $request->pertanyaan_10,
-                'kritik_saran' => $kritikSaran,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         } else {
@@ -359,7 +356,7 @@ class QuisionerController extends Controller
                 'pertanyaan_8' => $request->pertanyaan_8,
                 'pertanyaan_9' => $request->pertanyaan_9,
                 'pertanyaan_10' => $request->pertanyaan_10,
-                'kritik_saran' => $kritikSaran,
+                'kritik_saran' => $request->kritik_saran,
                 'form_id' => $id,
             ]);
         }
